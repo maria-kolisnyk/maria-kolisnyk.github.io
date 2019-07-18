@@ -1,26 +1,26 @@
 @font-face {
     font-family: "Agenda";
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/Agenda-Light.otf");
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/agendaLight.eot");
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/agendaLight.woff");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/Agenda-Light.otf");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/agendaLight.eot");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/agendaLight.woff");
 }
 @font-face {
     font-family: "Agenda Medium";
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/Agenda-Medium.otf");
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/agendaMedium.eot");
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/agendaMedium.woff");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/Agenda-Medium.otf");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/agendaMedium.eot");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/agendaMedium.woff");
 }
 @font-face {
     font-family: 'Agenda Regular';
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/Agenda-Regular.otf");
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/agendaNormal.eot");
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/agendaNormal.woff");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/Agenda-Regular.otf");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/agendaNormal.eot");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/agendaNormal.woff");
 }
 @font-face {
     font-family: 'Agenda Bold';
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/Agenda-Bold.otf");
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/agendaBold.eot");
-    src: url("https://maria-kolisnyk.github.io/halifax.app.css/assets/fonts/Agenda/agendaBold.woff");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/Agenda-Bold.otf");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/agendaBold.eot");
+    src: url("https://maria-kolisnyk.github.io/assets/fonts/Agenda/agendaBold.woff");
 }
 
 /*Header*/
@@ -31,13 +31,13 @@ img.trovBlue{
     height: 51px;
     width: 197px;
     object-fit: contain;
-    content: url(https://maria-kolisnyk.github.io/halifax.app.css/assets/images/logo/logo-renters-by-halifax.png);
-    content: -webkit-image-set(url(https://maria-kolisnyk.github.io/halifax.app.css/assets/images/logo/logo-renters-by-halifax.png) 1x,
-            url(https://maria-kolisnyk.github.io/halifax.app.css/assets/images/logo/logo-renters-by-halifax@2x.png) 2x,
-            url(https://maria-kolisnyk.github.io/halifax.app.css/assets/images/logo/logo-renters-by-halifax@3x.png) 3x);
-    content: image-set(url(https://maria-kolisnyk.github.io/halifax.app.css/assets/images/logo/logo-renters-by-halifax.png) 1x,
-            url(https://maria-kolisnyk.github.io/halifax.app.css/assets/images/logo/logo-renters-by-halifax@2x.png) 2x,
-            url(https://maria-kolisnyk.github.io/halifax.app.css/assets/images/logo/logo-renters-by-halifax@3x.png) 3x);
+    content: url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax.png);
+    content: -webkit-image-set(url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax.png) 1x,
+            url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax@2x.png) 2x,
+            url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax@3x.png) 3x);
+    content: image-set(url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax.png) 1x,
+            url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax@2x.png) 2x,
+            url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax@3x.png) 3x);
 }
 
 /*Footer*/
