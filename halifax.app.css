@@ -100,7 +100,7 @@ label{
 }
 .forgot-link, .login-button-text{
     font-family: 'Agenda Bold',sans-serif;
-    font-weight: normal;
+    font-weight: 600;
 }
 .forgot-link{
     font-size: 16px;
@@ -131,8 +131,11 @@ label{
     padding-top: 0;
     line-height: 60px;
 }
-.login-button-text{
+.login-button-text, .loginagain-button-text{
     text-transform: none;
+}
+.signedout-form{
+    border-radius: 0;
 }
 @media screen and (max-width: 699px){
     .login-form{
