@@ -63,14 +63,14 @@ img.trovBlue{
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    font-family: 'Agenda Regular',sans-serif;
+    font-family: 'Agenda',sans-serif;
 }
 
 /*Form*/
 .form-header{
     width: auto;
     height: auto;
-    font-family: 'Agenda Regular',sans-serif;
+    font-family: 'Agenda',sans-serif;
     font-size: 36px;
     line-height: 54px;
     margin-bottom: 25px;
@@ -86,7 +86,7 @@ label{
     color: #323233;
 }
 .form-group input.inputbox {
-    font-family: 'Agenda Regular',sans-serif;
+    font-family: 'Agenda',sans-serif;
 }
 .form-group input.inputbox{
     font-size: 20px;
@@ -112,7 +112,7 @@ label{
     width: auto;
 }
 .Remember-me, .sign-up-link{
-    font-family: 'Agenda Regular',sans-serif;
+    font-family: 'Agenda',sans-serif;
     font-size: 16px;
 }
 .sign-up{
@@ -121,7 +121,7 @@ label{
 .Remember-me{
     color: #323233;
 }
-.button, .login-button{
+.button, .login-button, .forgot-passwrod-button{
     border-radius: 0;
     background-color: #970074;
     font-size: 20px;
@@ -131,17 +131,31 @@ label{
     padding-top: 0;
     line-height: 60px;
 }
-.login-button-text, .loginagain-button-text{
+.login-button-text, .loginagain-button-text, .forgot-passwrod-button-text{
     text-transform: none;
 }
 .signedout-form{
     border-radius: 0;
 }
+.forgot-password-form{
+    border-radius: 0;
+    height: auto;
+    padding: 40px 75px 60px;
+}
+.hint-text{
+    font-size: 20px;
+    line-height: 30px;
+    font-family: 'Agenda',sans-serif;
+    margin-bottom: 20px;
+    height: auto;
+    width: auto;
+}
+
 @media screen and (max-width: 699px){
     .login-form{
         max-width: 340px;
     }
-    .button, .login-button {
+    .button, .login-button, .forgot-passwrod-button {
         max-width: 280px;
     }
     .form-group{
@@ -149,5 +163,9 @@ label{
     }
     .form-group input.inputbox{
         max-width: 100%;
+    }
+    .forgot-password-form{
+        max-width: 340px;
+        padding: 20px 20px 40px;
     }
 }
