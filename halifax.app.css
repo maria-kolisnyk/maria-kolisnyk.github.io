@@ -131,8 +131,13 @@ label{
     padding-top: 0;
     line-height: 60px;
 }
-.login-button-text, .loginagain-button-text, .forgot-passwrod-button-text{
+.login-button-text, .loginagain-button-text, .forgot-passwrod-button-text, .set-password-button-text{
     text-transform: none;
+    font-family: 'Agenda Bold',sans-serif;
+    font-size: 20px;
+    height: auto;
+    line-height: 60px;
+    margin: 0;
 }
 .signedout-form{
     border-radius: 0;
@@ -149,6 +154,24 @@ label{
     margin-bottom: 20px;
     height: auto;
     width: auto;
+}
+.set-password-form{
+    width: 612px;
+    margin: auto;
+    border: solid 1px #dfdfdf;
+    background-color: #ffffff;
+    padding: 40px 125px;
+    max-width: 100%;
+    height: auto;
+}
+.password-policy{
+    width: auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Agenda',sans-serif;
+    color: #323233;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 699px){
@@ -167,5 +190,13 @@ label{
     .forgot-password-form{
         max-width: 340px;
         padding: 20px 20px 40px;
+    }
+    .set-password-form{
+        width: 340px;
+        padding: 30px 20px;
+    }
+    .form-header{
+        font-size: 28px;
+        line-height: 42px;
     }
 }
