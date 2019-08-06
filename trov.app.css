@@ -164,6 +164,37 @@ body{
 .Header{
     left: 0;
 }
+.forgot-password-form{
+    padding: 40px 75px 60px;
+    height: auto;
+}
+.hint-text{
+    height: auto;
+    width: auto;
+    margin-bottom: 25px;
+}
+.forgot-password-form .form-group{
+    width: 360px;
+    max-width: 100%;
+}
+.forgot-passwrod-button-text{
+    height: auto;
+}
+#lblUsername{
+    color: transparent;
+    height: 21px;
+    padding-top: 21px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#lblUsername:before{
+    content: 'Email Address';
+    color: #505050;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 @media screen and (max-width: 699px){
     .footer-bar{
@@ -191,7 +222,9 @@ body{
         margin-bottom: 0;
     }
     .forgot-password-form{
-        width: auto;
+        width: 340px;
+        max-width: 100%;
+        padding: 25px 20px 40px;
     }
     .login-form{
         margin: 0 auto;
@@ -201,5 +234,12 @@ body{
     }
     .form-group{
         margin-bottom: 15px;
+    }
+    .hint-text{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .forgot-passwrod-button{
+        width: 100%;
     }
 }

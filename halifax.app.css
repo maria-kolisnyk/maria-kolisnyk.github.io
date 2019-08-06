@@ -260,6 +260,21 @@ label{
 #lblRememberLogin input:checked + .Remember-me:after {
     display: block;
 }
+#lblUsername{
+    color: transparent;
+    height: 24px;
+    padding-top: 24px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#lblUsername:before{
+    content: 'Email Address';
+    color: #323233;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 @media screen and (max-width: 699px){
     .login-form{
@@ -269,7 +284,7 @@ label{
         padding-bottom: 40px;
     }
     .button, .login-button, .forgot-passwrod-button {
-        max-width: 280px;
+       width: 100%;
     }
     .form-group{
         max-width: 100%;
@@ -298,5 +313,8 @@ label{
     }
     .footer-container li{
         margin-bottom: 20px;
+    }
+    #forgotPasswordForm > .row{
+        margin: 0;
     }
 }
