@@ -23,17 +23,11 @@ body{
 .Header{
     background-color: #0040bb;
 }
-img.trovBlue{
+.trovBlue{
     height: 51px;
     width: 197px;
     object-fit: contain;
-    content: url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax.png);
-    content: -webkit-image-set(url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax.png) 1x,
-            url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax@2x.png) 2x,
-            url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax@3x.png) 3x);
-    content: image-set(url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax.png) 1x,
-            url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax@2x.png) 2x,
-            url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax@3x.png) 3x);
+    background-image: url(https://maria-kolisnyk.github.io/assets/images/logo/logo-renters-by-halifax.png);
 }
 
 /*Footer*/
