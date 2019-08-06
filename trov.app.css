@@ -27,6 +27,7 @@ body{
     color: #ffffff;
     font-family: GalanoGrotesque, sans-serif;
     position: relative;
+    z-index: 1;
 }
 .login-button{
     max-width: 244px;

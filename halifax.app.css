@@ -37,6 +37,7 @@ body{
     height: auto;
     padding: 55px 0;
     position: relative;
+    z-index: 1;
 }
 .copyright-text{
     display: none
@@ -268,6 +269,10 @@ label{
     position: absolute;
     top: 0;
     left: 0;
+}
+.spinner-icon{
+    width: 40px;
+    margin: 8px auto 0;
 }
 
 @media screen and (max-width: 699px){
