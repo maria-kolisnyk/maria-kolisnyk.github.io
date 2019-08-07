@@ -91,6 +91,8 @@ body{
     color: #FFF;
     display: none;
     transition: .2s;
+    font-size: 10px;
+    line-height: 16px;
 }
 #lblRememberLogin input:checked + .Remember-me:before {
     background: #0093dc;
