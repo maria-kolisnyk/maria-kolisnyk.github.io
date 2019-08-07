@@ -1,7 +1,6 @@
-$(function() {
-
+document.addEventListener("DOMContentLoaded", function(event) {
   function initiateFooter(){
-    const footerBlock = $('.footer-bar');
+    const footerBlock = document.getElementsByClassName('footer-bar')[0];
 
     const innerSection = '<div class="footer-container">\n' +
       '        <ul>\n' +
@@ -20,7 +19,7 @@ $(function() {
       '        </ul>\n' +
       '    </div>';
 
-    footerBlock.append(innerSection);
+    footerBlock.innerHTML += innerSection;
   }
 
   initiateFooter();
