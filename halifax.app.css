@@ -307,4 +307,7 @@ label{
     #forgotPasswordForm > .row{
         margin: 0;
     }
+    #loginForm > .row{
+        margin: 0;
+    }
 }

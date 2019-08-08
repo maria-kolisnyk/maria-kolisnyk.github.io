@@ -30,7 +30,8 @@ body{
     z-index: 1;
 }
 .login-button{
-    max-width: 244px;
+    width: 244px;
+    max-width: 100%;
     margin: auto;
 }
 .login-button-text{
@@ -55,7 +56,6 @@ body{
 .form > .row{
     margin: 0;
 }
-
 #lblRememberLogin input {
     position: absolute;
     z-index: -1;
@@ -100,9 +100,6 @@ body{
 #lblRememberLogin input:checked + .Remember-me:after {
     display: block;
 }
-
-
-/*footer styles*/
 .footer-container{
     width: 922px;
     margin: auto;
