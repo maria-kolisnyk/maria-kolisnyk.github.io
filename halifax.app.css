@@ -274,6 +274,9 @@ label{
 .form > .row{
     margin: 0;
 }
+.done{
+    text-decoration: line-through;
+}
 
 @media screen and (max-width: 699px){
     .login-form{

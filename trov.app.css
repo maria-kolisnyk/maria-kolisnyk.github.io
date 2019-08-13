@@ -214,6 +214,9 @@ body{
     height: auto;
     margin: 70px auto;
 }
+.done{
+    text-decoration: line-through;
+}
 
 @media screen and (max-width: 699px){
     .footer-bar{
