@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://jsagent.tcell.io/tcellagent.min.js" tcellappid="netCoreproject-hXcJx" tcellapikey="AQQBBAFXstS7SqFFkp2eDE6mPplNbCYEj7UhT4mAVaS84yd66k5TVxoYLCXcNMtdi-AguwA" tcellbaseurl="https://us.agent.tcell.insight.rapid7.com/api/v1"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDM</title>
+    <link rel="stylesheet" href="https://idm-trovrent-us-dev.macronlabs.com/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://idm-trovrent-us-dev.macronlabs.com/dist/css/trov.app.css">
+    <link id="customStyle" rel="stylesheet" href="./halifax.app.css">
+    <script src="./halifax.app.js"></script>
+</head>
+<body>
+<div class="row container body-content col-12">
+    <div class="Header">
+        <div class="Logo">
+            <div class="trovBlue" alt="Logo"></div>
+        </div>
+    </div>
+
+
+    <div class="account-page col-12">
+        <div class="main-block">
+            <div class="form-header">
+                Sign in to continue.
+            </div>
+
+            <div style="width:100%">
+                <div class="login-form">
+                    <form id="loginForm" class="form" action="" method="post" novalidate="novalidate">
+                        <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=halifax-web-client&amp;redirect_uri=https%3A%2F%2Ftrovrent-gb-dev-webrenters-halifax.macronlabs.com%2FloginSuccessful&amp;response_type=id_token%20token&amp;scope=openid%20profile%20email%20trov.renters.api.client&amp;state=f37e22af911a45bda23b4301fa2298ed&amp;nonce=fdda3620690f491e9234115999ddbd6b">
+                        <input type="hidden" data-val="true" data-val-required="The ShowOnlyLocalLogin field is required." id="ShowOnlyLocalLogin" name="ShowOnlyLocalLogin" value="False">
+                        <input type="hidden" id="btnSubmitType" name="button" value="login">
+                        <span class="helper"></span>
+                        <div class="login form-group">
+                            <label id="lblUsername" for="Username">Username</label>
+                            <input id="txtUsername" class="inputbox valid" placeholder="Enter your username" autofocus="" type="text" data-val="true" data-val-required="The Username field is required." name="Username" value="" aria-required="true" aria-invalid="false" aria-describedby="txtUsername-error">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Username" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label id="lblPassword" for="Password">Password</label>
+                                <div class="forgot-lnk-container">
+                                    <a id="lblForgotPassword" class="forgot-link">Forgot?</a>
+                                </div>
+                            </div>
+                            <input id="txtPassword" type="password" class="inputbox password valid" placeholder="Enter your password" autocomplete="off" value="" data-val="true" data-val-required="The Password field is required." name="Password" aria-required="true" aria-invalid="false" aria-describedby="txtPassword-error">
+                            <div class="password-eye toggle-password" title="Mask/Unmask password to check content"></div>
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+
+                        </div>
+                        <div class="form-group">
+                            <label id="lblRememberLogin" for="RememberLogin">
+                                <input type="checkbox" data-val="true" data-val-required="The RememberLogin field is required." id="RememberLogin" name="RememberLogin" value="true">
+                                <span id="lblRememberLoginText" class="Remember-me">Remember me</span>
+                            </label>
+                        </div>
+
+                        <div class="row">
+                            <input type="submit" value="default" class="hidden">
+                            <a id="btnSignIn" class="login-button">
+                                <label id="lblSignInText" class="login-button-text">Sign In</label>
+                            </a>
+                        </div>
+
+
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8E5QAqHowF5KmBiHd4FXey9GD4ZatamAuRKWdbu_21m78xlVMUSDfDf5prPuW-alMFA-l2fMBoYv4ZA2URMUTEaUz9627nSGX0boZ01KJUhSGlzlQ480XswfJZX_e0wCEWHImqkvd5Eoz0J24yX8cRY"><input name="RememberLogin" type="hidden" value="false"></form>
+
+                    <div class="row" style="text-align:center;margin-top:30px;">
+                        <div>
+                            <label id="lblSignUpText" class="sign-up">Don't have an account?</label>
+                            <a id="lnkSignUp" class="sign-up-link" href="#" style="display: none;">Sign Up</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<script src="https://idm-trovrent-us-dev.macronlabs.com/lib/jquery/jquery.js"></script>
+<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script src="/lib/bootstrap/js/bootstrap.js"></script>
+<script src="/dist/js/bundle.js"></script>
+
+<script>
+  $(".toggle-password").click(function () {
+    togglePassword("txtPassword");
+  });
+</script>
+
+<div class="copyright-text">
+    <p>
+        © 2018 Trov, Inc. All Rights Reserved.
+    </p>
+    <p style="color: transparent">
+        2.1.0.0        </p>
+</div>
+<div class="footer-bar"></div>
+
+
+</body>
+</html>

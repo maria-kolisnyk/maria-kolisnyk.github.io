@@ -19,6 +19,12 @@ body{
     justify-content: space-between;
     font-family: 'Agenda',sans-serif;
 }
+.account-page{
+    position: relative;
+    top: 0;
+    margin-top: 100px;
+    padding: 40px 0 60px;
+}
 label{
     margin-bottom: 10px;
 }
@@ -42,11 +48,6 @@ label{
 }
 .copyright-text{
     display: none
-}
-.account-page{
-    top: 0;
-    margin-top: 100px;
-    padding: 40px 0 60px;
 }
 .close-button-icon{
     max-width: 10px;
@@ -160,6 +161,7 @@ label{
     padding: 40px 125px;
     max-width: 100%;
     height: auto;
+    border-radius: 0;
 }
 .password-policy{
     width: auto;
@@ -177,6 +179,7 @@ label{
     line-height: 30px;
     font-family: 'Agenda',sans-serif;
     color: #323233;
+    margin: 35px auto;
 }
 .footer-container{
     max-width: 992px;
@@ -265,6 +268,12 @@ label{
 .Logo{
     line-height: 100px;
 }
+.set-password-button.button{
+    max-width: 100%;
+}
+.form > .row{
+    margin: 0;
+}
 
 @media screen and (max-width: 699px){
     .login-form{
@@ -304,10 +313,7 @@ label{
     .footer-container li{
         margin-bottom: 20px;
     }
-    #forgotPasswordForm > .row{
-        margin: 0;
-    }
-    #loginForm > .row{
-        margin: 0;
+    .set-password-form .set-password-success{
+        margin: 15px auto;
     }
 }
