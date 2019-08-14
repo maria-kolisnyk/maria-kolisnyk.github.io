@@ -217,6 +217,16 @@ body{
 .done{
     text-decoration: line-through;
 }
+.signedout-form{
+    height: auto;
+    padding: 50px 20px;
+    max-width: 100%;
+}
+.logout-message{
+    padding: 0;
+    height: auto;
+    margin-bottom: 30px;
+}
 
 @media screen and (max-width: 699px){
     .footer-bar{
@@ -280,5 +290,8 @@ body{
         position: relative;
         height: auto;
         margin: 50px auto;
+    }
+    .logout-message{
+        width: auto;
     }
 }

@@ -137,9 +137,6 @@ label{
     height: auto;
     margin: 0;
 }
-.signedout-form{
-    border-radius: 0;
-}
 .forgot-password-form{
     border-radius: 0;
     height: auto;
@@ -277,6 +274,20 @@ label{
 .done{
     text-decoration: line-through;
 }
+.signedout-form{
+    border-radius: 0;
+    height: auto;
+    padding: 50px 20px;
+    max-width: 100%;
+}
+.logout-message{
+    padding: 0;
+    height: auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: 'Agenda', sans-serif;
+}
 
 @media screen and (max-width: 699px){
     .login-form{
@@ -318,5 +329,8 @@ label{
     }
     .set-password-form .set-password-success{
         margin: 15px auto;
+    }
+    .logout-message{
+        width: auto;
     }
 }
