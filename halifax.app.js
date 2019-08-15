@@ -58,11 +58,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
       passwordPolicy.innerHTML = innerPolicy;
     }
 
-    if(input.classList.contains('input-validation-error')){
-      const passwordPolicy = document.getElementsByClassName('password-policy')[0];
-      passwordPolicy.classList.add("has-error");
-    }
+    let observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if(mutation.target.classList.contains('input-validation-error')){
+          const passwordPolicy = document.getElementsByClassName('password-policy')[0];
+          passwordPolicy.classList.add("has-error");
+        }
+        console.log(mutation);
+      });
+    });
+    let config = { attributes: true, childList: true, characterData: true };
+    observer.observe(input, config);
   }
+
 
   const txtUsername = document.getElementById('txtUsername');
 
