@@ -227,6 +227,12 @@ body{
     height: auto;
     margin-bottom: 30px;
 }
+.form-group input.input-validation-error{
+    border-color: #d0021b;
+}
+.has-error{
+    color: #d0021b;
+}
 
 @media screen and (max-width: 699px){
     .footer-bar{

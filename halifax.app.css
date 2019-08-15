@@ -288,6 +288,12 @@ label{
     line-height: 30px;
     font-family: 'Agenda', sans-serif;
 }
+.form-group input.input-validation-error{
+    border-color: #da1a35;
+}
+.has-error{
+    color: #da1a35;
+}
 
 @media screen and (max-width: 699px){
     .login-form{

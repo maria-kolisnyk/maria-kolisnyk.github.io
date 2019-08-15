@@ -143,6 +143,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       passwordPolicy.innerHTML = innerPolicy;
     }
+
+    if(input.classList.contains('input-validation-error')){
+      const passwordPolicy = document.getElementsByClassName('password-policy')[0];
+      passwordPolicy.classList.add("has-error");
+    }
   }
 
   const txtUsername = document.getElementById('txtUsername');
