@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
           const passwordPolicy = document.getElementsByClassName('password-policy')[0];
           passwordPolicy.classList.add("has-error");
         }
-        console.log(mutation);
       });
     });
     let config = { attributes: true, childList: true, characterData: true };
