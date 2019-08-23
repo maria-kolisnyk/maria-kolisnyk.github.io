@@ -233,6 +233,23 @@ body{
 .has-error{
     color: #d0021b;
 }
+.forgot-password-form .spinner-icon{
+    width: 22px;
+    margin: 0 auto;
+}
+.forgot-password-form .validation-error{
+    margin-top: 10px;
+    display: block;
+    padding-left: 30px;
+}
+.forgot-password-form .form-group{
+    position: relative;
+}
+.forgot-password-form .error-icon{
+    position: absolute;
+    top: 58px;
+    left: 0;
+}
 
 @media screen and (max-width: 699px){
     .footer-bar{

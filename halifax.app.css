@@ -258,10 +258,6 @@ label{
     top: 0;
     left: 0;
 }
-.spinner-icon{
-    width: 40px;
-    margin: 8px auto 0;
-}
 .Logo{
     line-height: 100px;
 }
@@ -293,6 +289,23 @@ label{
 }
 .has-error{
     color: #da1a35;
+}
+.forgot-passwrod-button .spinner-icon{
+    width: 22px;
+    margin: 18px auto;
+}
+.forgot-password-form .validation-error{
+    margin-top: 10px;
+    display: block;
+    padding-left: 30px;
+}
+.forgot-password-form .form-group{
+    position: relative;
+}
+.forgot-password-form .error-icon{
+    position: absolute;
+    top: 58px;
+    left: 0;
 }
 
 @media screen and (max-width: 699px){
