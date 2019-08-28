@@ -22,20 +22,18 @@
 
     <div class="account-page col-12">
         <div class="main-block">
-            <div class="form-header">
-                Sign in to continue.
-            </div>
+            <div class="form-header">Sign In to Continue</div>
 
             <div style="width:100%">
                 <div class="login-form">
                     <form id="loginForm" class="form" action="" method="post" novalidate="novalidate">
-                        <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=halifax-web-client&amp;redirect_uri=https%3A%2F%2Ftrovrent-gb-dev-webrenters-halifax.macronlabs.com%2FloginSuccessful&amp;response_type=id_token%20token&amp;scope=openid%20profile%20email%20trov.renters.api.client&amp;state=f37e22af911a45bda23b4301fa2298ed&amp;nonce=fdda3620690f491e9234115999ddbd6b">
+                        <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=halifax-web-client&amp;redirect_uri=https%3A%2F%2Ftrovrent-gb-dev-webrenters-halifax.macronlabs.com%2FloginSuccessful&amp;response_type=id_token%20token&amp;scope=openid%20profile%20email%20trov.renters.api.client&amp;state=fd99d7d9fdab499483b8a8cecbc8db03&amp;nonce=a459cf9b017241a0bd1027bc2421a78e">
                         <input type="hidden" data-val="true" data-val-required="The ShowOnlyLocalLogin field is required." id="ShowOnlyLocalLogin" name="ShowOnlyLocalLogin" value="False">
                         <input type="hidden" id="btnSubmitType" name="button" value="login">
                         <span class="helper"></span>
                         <div class="login form-group">
                             <label id="lblUsername" for="Username">Username</label>
-                            <input id="txtUsername" class="inputbox valid" placeholder="Enter your username" autofocus="" type="text" data-val="true" data-val-required="The Username field is required." name="Username" value="" aria-required="true" aria-invalid="false" aria-describedby="txtUsername-error">
+                            <input id="txtUsername" class="inputbox" placeholder="Enter your email address" autofocus="" type="text" data-val="true" data-val-required="The Username field is required." name="Username" value="">
                             <span class="text-danger field-validation-valid" data-valmsg-for="Username" data-valmsg-replace="true"></span>
                         </div>
                         <div class="form-group">
@@ -45,7 +43,7 @@
                                     <a id="lblForgotPassword" class="forgot-link">Forgot?</a>
                                 </div>
                             </div>
-                            <input id="txtPassword" type="password" class="inputbox password valid" placeholder="Enter your password" autocomplete="off" value="" data-val="true" data-val-required="The Password field is required." name="Password" aria-required="true" aria-invalid="false" aria-describedby="txtPassword-error">
+                            <input id="txtPassword" type="password" class="inputbox password" placeholder="Enter your password" autocomplete="off" value="" data-val="true" data-val-required="The Password field is required." name="Password">
                             <div class="password-eye toggle-password" title="Mask/Unmask password to check content"></div>
                             <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
 
@@ -65,7 +63,7 @@
                         </div>
 
 
-                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8E5QAqHowF5KmBiHd4FXey9GD4ZatamAuRKWdbu_21m78xlVMUSDfDf5prPuW-alMFA-l2fMBoYv4ZA2URMUTEaUz9627nSGX0boZ01KJUhSGlzlQ480XswfJZX_e0wCEWHImqkvd5Eoz0J24yX8cRY"><input name="RememberLogin" type="hidden" value="false"></form>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FPxrFj6KfdLjHvGN2JSMrXz83R-o5F5qb6cLHudBepc9OUE6EEvNtxvcLn06a8UiQqvHDyARJ-MBOs-6qzybbWI-cK2GkvL08hQCRPsM2H5uTWIEDuLMmW7joaKjSPsMFB3kYWMjhgdFm6FGZInVs7YZzerbAjVIctft6dSvqpkYbSB2LoCUAtRaxWB88FKqQ"><input name="RememberLogin" type="hidden" value="false"></form>
 
                     <div class="row" style="text-align:center;margin-top:30px;">
                         <div>
@@ -79,8 +77,23 @@
 
         </div>
 
-    </div>
 
+        <div id="popUpMessage" class="message-control">
+            <div class="message-window">
+                <div class="type-bar info"></div>
+                <div class="message-container">
+                    <span class="message-title">Email sent</span>
+                    <div id="txtMessage" class="message">An email has been sent to the address you provided. Follow the instructions in the email to reset your password.</div>
+                </div>
+            </div>
+            <div id="btnCloseMessage">
+                <div class="close-button">
+                    <div class="close-button-icon"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 </div>

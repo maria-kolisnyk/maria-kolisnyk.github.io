@@ -72,24 +72,6 @@ label{
 .copyright-text{
     display: none
 }
-.close-button-icon{
-    max-width: 10px;
-}
-.message-title{
-    font-size: 20px;
-    font-family: 'Source Sans Pro Semi Bold',sans-serif;
-    line-height: 30px;
-    font-weight: normal;
-}
-.message-container{
-    padding-top: 20px;
-}
-.message{
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    font-family: 'Source Sans Pro Regular',sans-serif;
-}
 .form-header{
     width: auto;
     height: auto;
@@ -105,20 +87,28 @@ label{
     font-family: 'Source Sans Pro Semi Bold',sans-serif;
     font-size: 16px;
     line-height: 24px;
-    color: #323233;
+    color: #071d49;
     height: auto;
 }
 .form-group input.inputbox {
     font-family: 'Source Sans Pro Regular',sans-serif;
-}
-.form-group input.inputbox{
     font-size: 20px;
-    border-radius: 0;
+    border-color: #b5bbc8;
+    outline: none;
+    color: #071d49;
+}
+.form-group input.inputbox:focus{
+    -webkit-box-shadow: 0 0 4px 1px #ab7ce1;
+    -moz-box-shadow: 0 0 4px 1px #ab7ce1;
+    box-shadow: 0 0 4px 1px #ab7ce1;
 }
 .login-form{
     border-radius: 6px;
     padding: 40px 30px 60px;
     border-color: #e1e4e9;
+}
+.login-form>.row{
+    display: none;
 }
 .forgot-link, .login-button-text{
     font-family: 'Source Sans Pro Semi Bold',sans-serif;
@@ -127,39 +117,30 @@ label{
 .forgot-link{
     font-size: 16px;
     line-height: 24px;
-    color: #0040bb;
+    color: #005eb8;
 }
 .forgot-lnk-container{
     float: right;
     width: auto;
 }
-.Remember-me, .sign-up-link{
-    font-family: 'Source Sans Pro Regular',sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-}
 .sign-up{
     display: none;
 }
-.Remember-me{
-    color: #323233;
-    font-size: 16px;
-    line-height: 24px;
-}
 .button, .login-button, .forgot-passwrod-button{
-    border-radius: 0;
-    background-color: #970074;
-    font-size: 20px;
+    border-radius: 50px;
+    background-color: #005eb8;
+    font-size: 18px;
     width: 100%;
     max-width: 360px;
     box-shadow: none;
     padding-top: 0;
     line-height: 60px;
+    letter-spacing: -0.09px;
 }
 .login-button-text, .loginagain-button-text, .forgot-passwrod-button-text, .set-password-button-text{
     text-transform: none;
     font-family: 'Source Sans Pro Semi Bold',sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     height: auto;
     margin: 0;
 }
@@ -234,9 +215,22 @@ label{
     float: left;
     margin: 0 10px 0 0;
 }
+.field-validation-error{
+    color: #cc024b;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Source Sans Pro Semi Bold', sans-serif;
+}
 .field-validation-error span{
     line-height: 20px;
     display: block;
+    margin-left: 0;
+    padding-left: 30px;
+}
+.field-validation-error span:before{
+    width: 24px;
+    height: 24px;
+    left: 0;
 }
 #lblRememberLogin input {
     position: absolute;
@@ -244,7 +238,15 @@ label{
     opacity: 0;
     margin: 10px 0 0 20px;
 }
-.Remember-me {
+.Remember-me, .sign-up-link{
+    font-family: 'Source Sans Pro Regular',sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+.Remember-me{
+    color: #071d49;
+    font-size: 16px;
+    line-height: 24px;
     position: relative;
     padding: 0 0 0 26px;
     cursor: pointer;
@@ -253,19 +255,19 @@ label{
 .Remember-me:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0;
     width: 16px;
     height: 16px;
     border-radius: 2px;
     background: #fafafa;
-    border: solid 1px #bfbfbf;
+    border: solid 1px #b5bbc8;
     transition: .2s;
 }
 .Remember-me:after {
     content: '\e013';
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 3px;
     font-family: 'Glyphicons Halflings';
     color: #FFF;
@@ -290,7 +292,7 @@ label{
 }
 #lblUsername:before{
     content: 'Email Address';
-    color: #323233;
+    color: #071d49;
     position: absolute;
     top: 0;
     left: 0;
@@ -322,10 +324,16 @@ label{
     font-family: 'Source Sans Pro Regular', sans-serif;
 }
 .form-group input.input-validation-error{
-    border-color: #da1a35;
+    border-color: #cc004a;
+    border-width: 2px;
+}
+.form-group input.input-validation-error:focus{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 .has-error{
-    color: #da1a35;
+    color: #cc004a;
 }
 .forgot-passwrod-button .spinner-icon{
     width: 22px;
@@ -343,6 +351,76 @@ label{
     position: absolute;
     top: 58px;
     left: 0;
+}
+/*Notifications*/
+.message-control{
+    position: fixed;
+    bottom: 80px;
+    margin: 0;
+    max-width: calc(100% - 12px);
+}
+.message-window{
+    overflow: visible;
+    height: auto;
+    position: relative;
+    bottom: auto;
+    box-shadow: none;
+}
+.message-title{
+    font-size: 20px;
+    font-family: 'Source Sans Pro Semi Bold',sans-serif;
+    line-height: 30px;
+    font-weight: normal;
+    height: auto;
+    width: auto;
+    color: #071d49;
+}
+.message-container{
+    padding: 20px 30px;
+    width: 100%;
+    float: none;
+    position: relative;
+}
+.message{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Source Sans Pro Regular',sans-serif;
+    width: auto;
+    height: auto;
+    color: #071d49;
+}
+.type-bar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+.type-bar.error{
+    box-shadow: 0 10px 25px 0 rgba(204, 0, 74, 0.15);
+    border: solid 2px #cc004a;
+    background: transparent;
+}
+.type-bar.info{
+    box-shadow: 0 10px 25px 0 rgba(7, 29, 73, 0.15);
+    border: solid 2px #005eb8;
+    background: transparent;
+}
+.close-button{
+    position: absolute;
+    left: auto;
+    right: -10px;
+    margin: 0;
+    bottom: auto;
+    top: -10px;
+}
+.close-button-icon{
+    width: 100%;
+    height: 100%;
+    background-size: 11px;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 699px){
@@ -376,6 +454,9 @@ label{
     .set-password-form.success{
         padding: 50px 30px;
     }
+    .footer-container{
+        flex-direction: column;
+    }
     .footer-container ul{
         flex-direction: column;
         text-align: center;
@@ -383,10 +464,24 @@ label{
     .footer-container li{
         margin-bottom: 20px;
     }
+    .footer-logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     .set-password-form .set-password-success{
         margin: 15px auto;
     }
     .logout-message{
         width: auto;
+    }
+    .message-window{
+        width: 349px;
+        max-width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .close-button{
+        /*right: 20px*/
     }
 }
