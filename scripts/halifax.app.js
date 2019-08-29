@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     observer.observe(input, config);
   }
 
-
   const txtUsername = document.getElementById('txtUsername');
 
   if(txtUsername){
@@ -90,5 +89,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if(text === 'Sign in to continue.'){
     formHeader.innerText = 'Sign In to Continue'
   }
+
+
+  const setPasswordButton = document.getElementsByClassName('set-password-button-text')[0];
+  if(setPasswordButton){
+      setPasswordButton.innerHTML = setPasswordButton.innerHTML.toLowerCase();
+  }
+
 
 });

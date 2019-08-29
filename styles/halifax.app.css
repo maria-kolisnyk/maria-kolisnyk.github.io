@@ -101,6 +101,7 @@ label{
     -webkit-box-shadow: 0 0 4px 1px #ab7ce1;
     -moz-box-shadow: 0 0 4px 1px #ab7ce1;
     box-shadow: 0 0 4px 1px #ab7ce1;
+    border-color: #071d49;
 }
 .login-form{
     border-radius: 6px;
@@ -138,14 +139,15 @@ label{
     letter-spacing: -0.09px;
 }
 .login-button-text, .loginagain-button-text, .forgot-passwrod-button-text, .set-password-button-text{
-    text-transform: none;
+    text-transform: capitalize;
     font-family: 'Source Sans Pro Semi Bold',sans-serif;
     font-size: 18px;
     height: auto;
     margin: 0;
+    letter-spacing: -0.09px;
 }
 .forgot-password-form{
-    border-radius: 0;
+    border-radius: 6px;
     height: auto;
     padding: 40px 75px 60px;
 }
@@ -156,16 +158,18 @@ label{
     margin-bottom: 20px;
     height: auto;
     width: auto;
+    letter-spacing: -0.1px;
+    color: #1f335b;
 }
 .set-password-form{
     width: 612px;
     margin: auto;
-    border: solid 1px #dfdfdf;
+    border: solid 1px #e1e4e9;
     background-color: #ffffff;
     padding: 40px 125px;
     max-width: 100%;
     height: auto;
-    border-radius: 0;
+    border-radius: 6px;
 }
 .password-policy{
     width: auto;
@@ -173,7 +177,7 @@ label{
     font-size: 16px;
     line-height: 24px;
     font-family: 'Source Sans Pro Regular',sans-serif;
-    color: #323233;
+    color: #071d49;
     margin-bottom: 20px;
 }
 .set-password-form .set-password-success{
@@ -182,8 +186,9 @@ label{
     font-size: 20px;
     line-height: 30px;
     font-family: 'Source Sans Pro Regular',sans-serif;
-    color: #323233;
-    margin: 35px auto;
+    color: #1f335b;
+    margin: 40px -20px;
+    letter-spacing: -0.1px;
 }
 .footer-container{
     max-width: 806px;
@@ -310,10 +315,11 @@ label{
     text-decoration: line-through;
 }
 .signedout-form{
-    border-radius: 0;
+    border-radius: 6px;
     height: auto;
     padding: 50px 20px;
     max-width: 100%;
+    border-color: #e1e4e9;
 }
 .logout-message{
     padding: 0;
@@ -321,6 +327,7 @@ label{
     margin-bottom: 30px;
     font-size: 20px;
     line-height: 30px;
+    color: #071d49;
     font-family: 'Source Sans Pro Regular', sans-serif;
 }
 .form-group input.input-validation-error{
@@ -339,10 +346,17 @@ label{
     width: 22px;
     margin: 18px auto;
 }
+.validation-error{
+    font-family: 'Source Sans Pro Semi Bold',sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #cc024b;
+}
 .forgot-password-form .validation-error{
     margin-top: 10px;
     display: block;
     padding-left: 30px;
+    width: initial;
 }
 .forgot-password-form .form-group{
     position: relative;
@@ -351,6 +365,8 @@ label{
     position: absolute;
     top: 58px;
     left: 0;
+    width: 24px;
+    height: 24px;
 }
 /*Notifications*/
 .message-control{
