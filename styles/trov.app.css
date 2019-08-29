@@ -250,6 +250,66 @@ body{
     top: 58px;
     left: 0;
 }
+/*Notifications*/
+.message-control{
+    position: fixed;
+    bottom: 80px;
+    margin: 0;
+    max-width: calc(100% - 12px);
+}
+.message-window{
+    overflow: visible;
+    height: auto;
+    position: relative;
+    bottom: auto;
+    box-shadow: none;
+}
+.message-title{
+    height: auto;
+    width: auto;
+}
+.message-container{
+    padding: 20px 30px;
+    width: 100%;
+    float: none;
+    position: relative;
+}
+.message{
+    width: auto;
+    height: auto;
+}
+.type-bar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+.type-bar.error{
+    box-shadow: 0 10px 25px 0 rgba(208, 2, 27, 0.15);
+    border: solid 2px #d0021b;
+    background: transparent;
+}
+.type-bar.info{
+    box-shadow: 0 10px 25px 0 rgba(0, 147, 220, 0.15);
+    border: solid 2px #0093dc;
+    background: transparent;
+}
+.close-button{
+    position: absolute;
+    left: auto;
+    right: -10px;
+    margin: 0;
+    bottom: auto;
+    top: -10px;
+}
+.close-button-icon{
+    width: 100%;
+    height: 100%;
+    background-size: 11px;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 @media screen and (max-width: 699px){
     .footer-bar{
@@ -316,5 +376,11 @@ body{
     }
     .logout-message{
         width: auto;
+    }
+    .message-window{
+        width: 349px;
+        max-width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
