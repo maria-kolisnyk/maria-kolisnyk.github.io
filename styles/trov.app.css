@@ -310,6 +310,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
+.Logo{
+    line-height: 100px;
+}
 
 @media screen and (max-width: 699px){
     .footer-bar{
@@ -382,5 +385,18 @@ body{
         max-width: calc(100% - 10px);
         margin-left: 5px;
         margin-right: 5px;
+    }
+    .Header{
+        height: 80px;
+    }
+    .account-page{
+        margin-top: 80px;
+    }
+    .trovBlue{
+        width: 71px;
+        height: 29px;
+    }
+    .Logo{
+        line-height: 80px;
     }
 }
