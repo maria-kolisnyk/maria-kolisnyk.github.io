@@ -129,7 +129,7 @@ label{
     display: none;
 }
 .button, .login-button, .forgot-passwrod-button{
-    border-radius: 50px;
+    border-radius: 30px;
     background-color: #005eb8;
     font-size: 18px;
     width: 100%;
@@ -138,6 +138,22 @@ label{
     padding-top: 0;
     line-height: 60px;
     letter-spacing: -0.09px;
+}
+.button:hover, .login-button:hover, .forgot-passwrod-button:hover{
+    background-color: #071d49;
+}
+.button:focus, .login-button:focus, .forgot-passwrod-button:focus{
+    background-color: #071d49;
+    border: solid 2px #ac7ce2;
+    outline-width: 0;
+    line-height: 56px;
+}
+.button:active, .login-button:active, .forgot-passwrod-button:active{
+    background-color: #071d49;
+    border: solid 2px #ac7ce2;
+    box-shadow: none;
+    font-size: 18px;
+    line-height: 56px;
 }
 .login-button-text, .loginagain-button-text, .forgot-passwrod-button-text, .set-password-button-text{
     text-transform: capitalize;

@@ -313,6 +313,23 @@ body{
 .Logo{
     line-height: 100px;
 }
+.button, .login-button, .forgot-passwrod-button{
+    box-shadow: none;
+    padding-top: 0;
+    line-height: 60px;
+}
+.button:hover, .login-button:hover, .forgot-passwrod-button:hover{
+    background-color: #0077d3;
+}
+.button:focus, .login-button:focus, .forgot-passwrod-button:focus{
+    background-color: #0077d3;
+    outline-width: 0;
+}
+.button:active, .login-button:active, .forgot-passwrod-button:active{
+    background-color: #0077d3;
+    box-shadow: none;
+    font-size: 16px;
+}
 
 @media screen and (max-width: 699px){
     .footer-bar{
