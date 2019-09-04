@@ -439,6 +439,11 @@ label{
     background-position: center;
     background-repeat: no-repeat;
 }
+.error-div .validation-error{
+    font-family: 'Source Sans Pro Semi Bold';
+    font-size: 16px;
+    line-height: 24px
+}
 
 @media screen and (max-width: 699px){
     .login-form{
