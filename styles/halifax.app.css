@@ -98,6 +98,11 @@ label{
     outline: none;
     color: #071d49;
 }
+input::placeholder{
+    color: #b5bbc8;
+    font-family: 'Source Sans Pro Regular',sans-serif;
+    font-size: 20px;
+}
 .form-group input.inputbox:focus{
     -webkit-box-shadow: 0 0 4px 1px #ab7ce1;
     -moz-box-shadow: 0 0 4px 1px #ab7ce1;
