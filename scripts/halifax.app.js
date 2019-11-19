@@ -96,4 +96,18 @@ document.addEventListener('DOMContentLoaded', function() {
         setPasswordButton.innerHTML = setPasswordButton.innerHTML.toLowerCase();
     }
 
+    function changeFavicon() {
+        let oldLink = document.querySelector("link[rel*='icon']");
+        let old_Link = document.querySelector("link[rel*='shortcut icon']");
+
+        let link = document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'shortcut icon';
+        link.href = 'https://trov-develop-renters-gb.s3.us-west-1.amazonaws.com/templates/identityserver/assets/images/favicon-halifax.ico';
+        document.head.removeChild(oldLink);
+        document.head.removeChild(old_Link);
+        document.getElementsByTagName('head')[0].appendChild(link);
+    };
+
+    changeFavicon()
 });
