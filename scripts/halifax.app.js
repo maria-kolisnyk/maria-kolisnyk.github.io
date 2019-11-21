@@ -97,8 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function changeFavicon() {
-        let oldLink = document.querySelector("link[rel*='icon']");
-        let old_Link = document.querySelector("link[rel*='shortcut icon']");
+        let oldLink = document.querySelector('link[rel*=\'icon\']');
+        let old_Link = document.querySelector('link[rel*=\'shortcut icon\']');
 
         let link = document.createElement('link');
         link.type = 'image/x-icon';
@@ -109,5 +109,5 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementsByTagName('head')[0].appendChild(link);
     };
 
-    changeFavicon()
+    changeFavicon();
 });

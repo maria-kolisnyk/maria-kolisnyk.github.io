@@ -1,27 +1,31 @@
 /*changed styles*/
-body{
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between;
 }
-.account-page{
+
+.account-page {
     position: relative;
     top: 0;
     margin-top: 100px;
     padding: 50px 0;
 }
-.form-header{
+
+.form-header {
     width: auto;
     height: auto;
     margin-top: 0;
     margin-bottom: 27px;
 }
-.copyright-text{
+
+.copyright-text {
     position: relative;
     bottom: auto;
 }
-.footer-bar{
+
+.footer-bar {
     height: auto;
     padding: 95px 30px;
     color: #ffffff;
@@ -29,39 +33,58 @@ body{
     position: relative;
     z-index: 1;
 }
-.login-button{
+
+.login-button {
     width: 244px;
     max-width: 100%;
     margin: auto;
 }
-.login-button-text{
+
+.login-button-text {
     height: auto;
     margin: 0;
 }
-.login-form{
+
+.login-form {
     padding: 40px 125px 60px;
 }
-.login-form > .row{
+
+.login-form>.row {
     display: none;
 }
-.form-group{
+
+.form-group {
     margin-bottom: 22px;
     width: auto;
 }
-.form-group label{
+
+.form-group label {
     font-size: 14px;
     line-height: 21px;
     height: auto;
 }
-.form > .row{
+
+.form>.row {
     margin: 0;
 }
+
 #lblRememberLogin input {
     position: absolute;
     z-index: -1;
     opacity: 0;
     margin: 10px 0 0 20px;
 }
+
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}
+
+::-ms-clear,
+::-ms-reveal {
+    display: none;
+}
+
 .Remember-me {
     position: relative;
     padding: 0 0 0 26px;
@@ -70,6 +93,7 @@ body{
     line-height: 21px;
     height: auto;
 }
+
 .Remember-me:before {
     content: '';
     position: absolute;
@@ -82,6 +106,7 @@ body{
     border: solid 1px #bfbfbf;
     transition: .2s;
 }
+
 .Remember-me:after {
     content: '\e013';
     position: absolute;
@@ -94,39 +119,47 @@ body{
     font-size: 10px;
     line-height: 16px;
 }
-#lblRememberLogin input:checked + .Remember-me:before {
+
+#lblRememberLogin input:checked+.Remember-me:before {
     background: #0093dc;
 }
-#lblRememberLogin input:checked + .Remember-me:after {
+
+#lblRememberLogin input:checked+.Remember-me:after {
     display: block;
 }
-.footer-container{
+
+.footer-container {
     width: 922px;
     margin: auto;
     max-width: 100%;
 }
-.footer-bar ul{
+
+.footer-bar ul {
     list-style: none;
     padding: 0;
 }
-.footer-bar li{
+
+.footer-bar li {
     font-size: 16px;
     line-height: 30px;
 }
 
-.footer-bar a{
+.footer-bar a {
     color: #ffffff;
     text-decoration: none;
 }
-.footer-bar a.underline{
+
+.footer-bar a.underline {
     text-decoration: underline;
 }
-.footer-top{
+
+.footer-top {
     display: flex;
     justify-content: space-between;
     padding-bottom: 45px;
 }
-.footer-top h5{
+
+.footer-top h5 {
     font-size: 16px;
     line-height: 30px;
     margin-bottom: 20px;
@@ -134,53 +167,66 @@ body{
     margin-top: 0;
     letter-spacing: 4px;
 }
-.footer-bottom{
+
+.footer-bottom {
     padding-top: 30px;
     border-top: 1px solid #ffffff;
 }
-.footer-bottom p{
+
+.footer-bottom p {
     font-size: 12px;
     line-height: 25px;
 }
-.social{
+
+.social {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
 }
-.social ul{
+
+.social ul {
     display: flex;
     margin-bottom: 0;
 }
-.social li{
+
+.social li {
     padding: 0 8px;
 }
-.form-group input.inputbox{
+
+.form-group input.inputbox {
     width: 100%;
 }
-.forgot-lnk-container{
+
+.forgot-lnk-container {
     width: auto;
     float: right;
 }
-.Header{
+
+.Header {
     left: 0;
 }
-.forgot-password-form{
+
+.forgot-password-form {
     padding: 40px 75px 60px;
     height: auto;
 }
-.hint-text{
+
+.hint-text {
     height: auto;
     width: auto;
     margin-bottom: 25px;
 }
-.forgot-password-form .form-group{
+
+.forgot-password-form .form-group {
     width: 360px;
     max-width: 100%;
 }
-.forgot-passwrod-button-text{
+
+.forgot-passwrod-button-text {
     height: auto;
 }
-#lblUsername{
+
+#lblUsername {
     color: transparent;
     height: 21px;
     padding-top: 21px;
@@ -188,113 +234,137 @@ body{
     position: relative;
     width: 100%;
 }
-#lblUsername:before{
+
+#lblUsername:before {
     content: 'Email Address';
     color: #505050;
     position: absolute;
     top: 0;
     left: 0;
 }
-.set-password-form{
+
+.set-password-form {
     height: auto;
 }
-.set-password-form .form{
+
+.set-password-form .form {
     width: 360px;
     max-width: 100%;
     margin: auto;
 }
-.password-policy{
+
+.password-policy {
     width: auto
 }
-.set-password-button.button{
+
+.set-password-button.button {
     max-width: 100%;
 }
-.set-password-form .set-password-success{
+
+.set-password-form .set-password-success {
     position: relative;
     height: auto;
     margin: 70px auto;
 }
-.done{
+
+.done {
     text-decoration: line-through;
 }
-.signedout-form{
+
+.signedout-form {
     height: auto;
     padding: 50px 20px;
     max-width: 100%;
 }
-.logout-message{
+
+.logout-message {
     padding: 0;
     height: auto;
     margin-bottom: 30px;
 }
-.form-group input.input-validation-error{
+
+.form-group input.input-validation-error {
     border-color: #d0021b;
 }
-.has-error{
+
+.has-error {
     color: #d0021b;
 }
-.forgot-password-form .spinner-icon{
+
+.forgot-password-form .spinner-icon {
     width: 22px;
     margin: 0 auto;
 }
-.forgot-password-form .validation-error{
+
+.forgot-password-form .validation-error {
     margin-top: 10px;
     display: block;
     padding-left: 30px;
 }
-.forgot-password-form .form-group{
+
+.forgot-password-form .form-group {
     position: relative;
 }
-.forgot-password-form .error-icon{
+
+.forgot-password-form .error-icon {
     position: absolute;
     top: 58px;
     left: 0;
 }
+
 /*Notifications*/
-.message-control{
+.message-control {
     position: fixed;
     bottom: 80px;
     margin: 0;
     max-width: calc(100% - 12px);
 }
-.message-window{
+
+.message-window {
     overflow: visible;
     height: auto;
     position: relative;
     bottom: auto;
     box-shadow: none;
 }
-.message-title{
+
+.message-title {
     height: auto;
     width: auto;
 }
-.message-container{
+
+.message-container {
     padding: 20px 30px;
     width: 100%;
     float: none;
     position: relative;
 }
-.message{
+
+.message {
     width: auto;
     height: auto;
 }
-.type-bar{
+
+.type-bar {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 6px;
 }
-.type-bar.error{
+
+.type-bar.error {
     box-shadow: 0 10px 25px 0 rgba(208, 2, 27, 0.15);
     border: solid 2px #d0021b;
     background: transparent;
 }
-.type-bar.info{
+
+.type-bar.info {
     box-shadow: 0 10px 25px 0 rgba(0, 147, 220, 0.15);
     border: solid 2px #0093dc;
     background: transparent;
 }
-.close-button{
+
+.close-button {
     position: absolute;
     left: auto;
     right: -10px;
@@ -302,7 +372,8 @@ body{
     bottom: auto;
     top: -10px;
 }
-.close-button-icon{
+
+.close-button-icon {
     width: 100%;
     height: 100%;
     background-size: 11px;
@@ -310,110 +381,143 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
-.Logo{
+
+.Logo {
     line-height: 100px;
 }
-.button, .login-button, .forgot-passwrod-button{
+
+.button,
+.login-button,
+.forgot-passwrod-button {
     box-shadow: none;
     padding-top: 0;
     line-height: 60px;
 }
-.button:hover, .login-button:hover, .forgot-passwrod-button:hover{
+
+.button:hover,
+.login-button:hover,
+.forgot-passwrod-button:hover {
     background-color: #0077d3;
 }
-.button:focus, .login-button:focus, .forgot-passwrod-button:focus{
+
+.button:focus,
+.login-button:focus,
+.forgot-passwrod-button:focus {
     background-color: #0077d3;
     outline-width: 0;
 }
-.button:active, .login-button:active, .forgot-passwrod-button:active{
+
+.button:active,
+.login-button:active,
+.forgot-passwrod-button:active {
     background-color: #0077d3;
     box-shadow: none;
     font-size: 16px;
 }
 
-@media screen and (max-width: 699px){
-    .footer-bar{
+@media screen and (max-width: 699px) {
+    .footer-bar {
         padding: 50px 30px 60px;
     }
-    .footer-top{
+
+    .footer-top {
         flex-wrap: wrap;
         padding-bottom: 5px;
     }
-    .footer-top div:nth-child(2){
+
+    .footer-top div:nth-child(2) {
         width: 110px;
     }
-    .footer-top h5{
+
+    .footer-top h5 {
         font-size: 12px;
         margin-bottom: 14px;
         letter-spacing: 3px;
     }
-    .footer-bar ul{
+
+    .footer-bar ul {
         margin-bottom: 50px;
     }
-    .social{
+
+    .social {
         flex-direction: column-reverse;
     }
-    .social ul{
+
+    .social ul {
         margin-bottom: 0;
     }
-    .forgot-password-form{
+
+    .forgot-password-form {
         width: 340px;
         max-width: 100%;
         padding: 25px 20px 40px;
     }
-    .login-form{
+
+    .login-form {
         margin: 0 auto;
         padding: 20px 30px 40px;
         width: 340px;
         max-width: 100%;
     }
-    .form-group{
+
+    .form-group {
         margin-bottom: 15px;
     }
-    .hint-text{
+
+    .hint-text {
         font-size: 14px;
         line-height: 21px;
     }
-    .forgot-passwrod-button{
+
+    .forgot-passwrod-button {
         width: 100%;
     }
-    .set-password-form{
+
+    .set-password-form {
         padding: 30px 20px;
         margin: auto;
         box-sizing: border-box;
         width: 340px;
         max-width: 100%;
     }
-    .form-header{
+
+    .form-header {
         font-size: 24px;
         line-height: 36px;
         margin-bottom: 20px;
     }
-    .set-password-form .set-password-success{
+
+    .set-password-form .set-password-success {
         position: relative;
         height: auto;
         margin: 50px auto;
     }
-    .logout-message{
+
+    .logout-message {
         width: auto;
     }
-    .message-window{
+
+    .message-window {
         width: 349px;
         max-width: calc(100% - 10px);
         margin-left: 5px;
         margin-right: 5px;
     }
-    .Header{
+
+    .Header {
         height: 80px;
     }
-    .account-page{
+
+    .account-page {
         margin-top: 80px;
     }
-    .trovBlue{
+
+    .trovBlue {
         width: 71px;
         height: 29px;
     }
-    .Logo{
+
+    .Logo {
         line-height: 80px;
     }
 }

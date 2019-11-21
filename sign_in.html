@@ -27,20 +27,20 @@
             <div style="width:100%">
                 <div class="login-form">
                     <form id="loginForm" class="form" action="" method="post" novalidate="novalidate">
-                        <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=halifax-web-client&amp;redirect_uri=https%3A%2F%2Ftrovrent-gb-stage-webrenters-halifax.gaullabs.net%2FloginSuccessful&amp;response_type=id_token%20token&amp;scope=openid%20profile%20email%20trov.renters.api.client&amp;state=21089ad8d9374b51939deb2ec60f9648&amp;nonce=e85ff5e82e484da6b02f37a9dcd9e057">
+                        <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=halifax-web-client&amp;redirect_uri=https%3A%2F%2Ftrovrent-gb-dev-webrenters-halifax.macronlabs.com%2FloginSuccessful&amp;response_type=id_token%20token&amp;scope=openid%20profile%20email%20trov.renters.api.client&amp;state=b0b1e12d638a4f2f8d1fb6cf55152d42&amp;nonce=bbb70c088f4c4d749f3e0f274812d193">
                         <input type="hidden" data-val="true" data-val-required="The ShowOnlyLocalLogin field is required." id="ShowOnlyLocalLogin" name="ShowOnlyLocalLogin" value="False">
                         <input type="hidden" id="btnSubmitType" name="button" value="login">
                         <span class="helper"></span>
                         <div class="login form-group">
                             <label id="lblUsername" for="Username">Username</label>
-                            <input id="txtUsername" class="inputbox" placeholder="Enter your email address" autofocus="" tabindex="1" type="text" data-val="true" data-val-required="The Username field is required." name="Username" value="">
+                            <input id="txtUsername" class="inputbox" placeholder="Enter your email address" autofocus="" tabindex="1" type="text" data-val="true" data-val-required="The Username field is required." name="Username" value="kolisnyk.mariia+1@gmail.com">
                             <span class="text-danger field-validation-valid" data-valmsg-for="Username" data-valmsg-replace="true"></span>
                         </div>
                         <div class="form-group">
                             <div>
                                 <label id="lblPassword" for="Password">Password</label>
                                 <div class="forgot-lnk-container">
-                                    <a id="lblForgotPassword" class="forgot-link" href="/Account/ForgotPassword?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dhalifax-web-client%26redirect_uri%3Dhttps%253A%252F%252Ftrovrent-gb-stage-webrenters-halifax.gaullabs.net%252FloginSuccessful%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520email%2520trov.renters.api.client%26state%3D21089ad8d9374b51939deb2ec60f9648%26nonce%3De85ff5e82e484da6b02f37a9dcd9e057" tabindex="5">
+                                    <a id="lblForgotPassword" class="forgot-link" href="/Account/ForgotPassword?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dhalifax-web-client%26redirect_uri%3Dhttps%253A%252F%252Ftrovrent-gb-dev-webrenters-halifax.macronlabs.com%252FloginSuccessful%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520email%2520trov.renters.api.client%26state%3Db0b1e12d638a4f2f8d1fb6cf55152d42%26nonce%3Dbbb70c088f4c4d749f3e0f274812d193" tabindex="5">
                                         Forgot?
                                     </a>
                                 </div>
@@ -64,7 +64,7 @@
                         </div>
 
 
-                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8CT-9Yx-6-1EhamgP8ctyYHgMsqDspfA3HQm5PbjYHZ1m0uy04nwuqIzt_yncE1IEAus80QENBFm33AVNysc0PKQq4K6az9QRYgt9D8BPtekRq7rFErP6S2q2c0LMXkcXEDS-VwnkAzChLD3-2LN9zo"><input name="RememberLogin" type="hidden" value="false"></form>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FMyAbAOZQpGvcmHt-C9xTKXywzfqw8rYTFVhGXN6cj8ojcGDt-XGUDxbYVp2bj0j6kv_9oLGMurNFlWN1gea9GOpPWztvCBHyN_hZfCG6CB71ZV_gItjbumRXyq3qTul7LKty5A8rDKLRYdTvlAhrI"><input name="RememberLogin" type="hidden" value="false"></form>
 
                     <div class="row" style="text-align:center;margin-top:30px;">
                         <div>
@@ -76,6 +76,25 @@
                 </div>
             </div>
 
+        </div>
+
+
+        <div id="popUpMessage" class="message-control">
+            <div class="message-window">
+                <div class="type-bar error"></div>
+                <div class="message-container">
+                    <span class="message-title">Account Locked</span>
+                    <div id="txtMessage" class="message">To keep you safe, we’ve locked your account for 30 minutes. You can get back online after that. Can’t wait for 30 minutes?</div>
+                    <div id="linkContainer" class="message-container">
+                        <a class="popup-link" href="/Account/ForgotPassword?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dhalifax-web-client%26redirect_uri%3Dhttps%253A%252F%252Ftrovrent-gb-dev-webrenters-halifax.macronlabs.com%252FloginSuccessful%26response_type%3Did_token%2520token%26scope%3Dopenid%2520profile%2520email%2520trov.renters.api.client%26state%3Db0b1e12d638a4f2f8d1fb6cf55152d42%26nonce%3Dbbb70c088f4c4d749f3e0f274812d193">Reset your password</a>
+                    </div>
+                </div>
+            </div>
+            <div id="btnCloseMessage">
+                <div class="close-button">
+                    <div class="close-button-icon"></div>
+                </div>
+            </div>
         </div>
 
     </div>
