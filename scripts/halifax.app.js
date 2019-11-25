@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let link = document.createElement('link');
         link.type = 'image/x-icon';
         link.rel = 'shortcut icon';
-        link.href = 'https://trov-develop-renters-gb.s3.us-west-1.amazonaws.com/templates/identityserver/assets/images/favicon-halifax.ico';
+        link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAjtJREFUOBFjZIjb8Z+BCoCJCmaAjRh8BrGA3FUfoMxQ5auE4svvv/4yePScZThx9yNYvMhdnqE9TA1FzY/f/xhCJl9g2H31LQMzg35Mw8Eb7xm42JgZHDSFGJiZGMGYg5WZIchYjGHLhdcMPgZiDNPiteByIDV//v5nCJtygWHnlbdgw+FhVLXmNkPbpnsoNgrxsDHsLDUBG/D3HyJyfwJdEjTpPMO2S2/g6hlB0a8sxsnw5vNvBjYWRgZtaR4GRqA0CzMjw9effxk4gS798uMPg4wQB8P3X//A4jeff2VgZGRkePLuB4MAFwvDk/c/GcBh1An0++wDTxjkhDkZzJT4GT4DNb789Ith37W3DMZSPAwS/GwM4vzsDEuOPWOYFKPJ0LLpLoOligCDijgXQ9Xq22CDwF4DuaLUSxHsBR0ZHgYLoCJ0ANKkKMrJ8OLjT4ZgEwmGzedfMyiKcDFcffoFrBTstY5QVYaN514xWKkKgA0DBfw3oLdMgK47fucDOGCvADUoinCCvWurLggWO/PgIzhIdlx+AwwOpCwC8kJDgAo4HJBdtOjIUwZ/Y3EGfk5wSIBdVb/uDgMw4uAAIgPkggzZX2HKoAEME2SwEGhIANCQQg8FZGEGVXFuhugZlxj+QGMTbBAuQ7ZceMWQMvcq2JJgU3FwZMBMCzOXADNhhoG9lu4ow6AhyQ1TA6ZBUd288S7Dd2CaAQE1YGBnOsuC2cjEJmCg77/+DjWMkBWQyoanbFI1oqunmkEAo7vF4+Woo1YAAAAASUVORK5CYII=';
         document.head.removeChild(oldLink);
         document.head.removeChild(old_Link);
         document.getElementsByTagName('head')[0].appendChild(link);
