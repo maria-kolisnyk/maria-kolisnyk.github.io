@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://jsagent.tcell.io/tcellagent.min.js" tcellappid="netCoreproject-hXcJx" tcellapikey="AQQBBAFXstS7SqFFkp2eDE6mPplNbCYEj7UhT4mAVaS84yd66k5TVxoYLCXcNMtdi-AguwA" tcellbaseurl="https://us.agent.tcell.insight.rapid7.com/api/v1"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDM</title>
-    <link rel="stylesheet" href="https://idm-trovrent-us-dev.macronlabs.com/lib/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="https://idm-trovrent-us-dev.macronlabs.com/dist/css/trov.app.css">
+    <link rel="icon" type="image/png" href="https://idm-trovrent-us-stage.gaullabs.net/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/png" href="https://idm-trovrent-us-stage.gaullabs.net/favicon-16x16.png">
+    <link rel="stylesheet" href="https://idm-trovrent-us-stage.gaullabs.net/dist/css/vendor_bundle.css">
+    <link rel="stylesheet" href="https://idm-trovrent-us-stage.gaullabs.net/dist/css/trov.app.css">
+
     <link id="customStyle" rel="stylesheet" href="styles/halifax.app.css">
-    <script src="scripts/halifax.app.js"></script>
+    <script src="https://idm-trovrent-us-stage.gaullabs.net/dist/js/vendors_bundle.js"></script>
 </head>
 <body>
 <div class="row container body-content col-12">
@@ -19,7 +21,6 @@
         </div>
     </div>
 
-
     <div class="account-page col-12">
         <div class="main-block">
             <div class="form-header">
@@ -27,32 +28,31 @@
             </div>
             <div class="signedout-form">
                 <div class="form">
-                    <input type="hidden" name="logoutId" value="CfDJ8FPxrFj6KfdLjHvGN2JSMrUO4CRvHnKNr2fKX9cC7-EjEIY8kdjB0jMtElP7U50H2VxxIV-RAGdOq6ps9D5ZoQkSP2x9NOsxR6YxngOYq_6TpV7zT1jFiU5uu-gaosomanlrBLTbhwIhKB6IacXz9HMQSaKy7moSQUtwG5V57NzUPU56AJbgffNlCL08qKskI44RN0kFkwL8bujd1KKYzxhePfAcW_6WSvdon2nUKdJZdseT3yRp8Lsgyyjuxb0XwGNC4S7AKw5Q-l3WypnuLLnZBIZ-x3WsAwGFYjgThgVnPF8WWQDUwKPdHLZ0v7bt0hioaoxo6dKVgz1-J8jfCUd6MjF7tlRj71DBKGu7sSzc9aO1o6vl3SZBRe6m8Uu3y9uEiD0AkhAV5ixrKoN4U6bfuwPo-TIEi7jMZZeoM6-6qnOxRqV1cblePSVjHmXZj_-trF7YtKWfqr-5fGvoabUNiRZAIAvPU13tK4ju4I1YEyH4FadqkN9V11LOwSJihuKrEJDNYIr-MOR0ehR3BDWOSBkx68dxIW9wtWRMZPHFgxfDZrK7injmWFGwwABkLg">
+                    <input type="hidden" name="logoutId" value="CfDJ8FMyAbAOZQpGvcmHt-C9xTI9FCO5Y_DRRwtWQvsg_qAc9eX3qeEFrrWXR4aCp4U7LQRGjUKcMWHMIczF4nZteP31XdKwGcJaP_3TOvIHMpqsxe-dDhw3zXv6KKA2M8ZmlMwkcXO6pkOUaEti5PkDg-YbjdXVsKOfgA_d2NckGnpGtpwKTv1oPfuXP5hfOk17qJl_mUDCRVRpQlP8u-2nK4KnVCs4YnV81uZancs8-Q_eMuAt1ZX2L0tPw9gXzQvB59l64IEjoXe8rFlsGKsMVqA3eKHJVVkeGRDlssWqkzR-MvGd4mZ0P_TBsq448UTTbFRNfUgXEogyklUVkOoPqVD6XHtHRuG_2wYLNIk_zgiQd1-JG_HQrhQoeyp2i-24Inc2TxQHB_n3AMs8rt9CaHs5211MFNsgmVrlsB9ceX4z9IcNkGpcqQZ1TdVjQlISGUoUlDNE76IhhmDGG9snjyLhC3OtMKXIDmx7S1cWv1Q87GefMLXhoj4dDFIAx3mjgTd8akgXjcr5mU1wtIusDnJv1Oa4zEBWIDOkVWoDmD9alSeCpZc8XcfAmd5LkJ5XyQ">
                     <span class="helper"></span>
                     <div class="hint-container">
                     <span id="lblHintText" class="logout-message">
-                        You have successfully signed out of your account. You can now close this window or sign back in.
+                        You have been signed out of your account. You can now close this window or sign back in.
                     </span>
                     </div>
                     <div class="row">
                         <input type="submit" value="default" class="hidden">
-                        <a id="btnSignIn" href="https://trovrent-gb-dev-webrenters-halifax.macronlabs.com/home" class="login-button">
-                            <label id="lblSignText" class="loginagain-button-text">Sign In Again</label>
+                        <a id="btnSignIn" href="https://trovrent-gb-dev-webrenters-halifax.macronlabs.com/home" class="button-href btn-primary btn-default">
+                            <label id="lblSignText" class="loginagain-button-text" for="btnSignIn">Sign In Again</label>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <iframe width="0" height="0" class="signout" src="https://idm-trovrent-us-dev.macronlabs.com/connect/endsession/callback?endSessionId=CfDJ8FPxrFj6KfdLjHvGN2JSMrXXCyjwc0b0q9SuZuhvG7Dr5gzhECBRuYYGXWcJDrLnvXRArZpP46qG1IaLmH7fjvM4MQN5EF2okV05l_KRoYBFN_rZ4IiK_DHZeZzLfwUpMigjDVUO4E3UYRbWVn0OKYHP5fZGHMtuC93wAsJLb8Oyg8HhLKcD-bfyAOtn6Uzv58eENXoUnOae5WjgNk8hj2u5ANhlYcf9ivNktm5ojP-YcJlh2NTxiY5m2eZgGt-T8slFE4HmIuoGmj7G8Zl-P86qbViikhtCaKZae5WRJcw5tLT1tZT6hRUFKPCTbaHscGbb3YW0e3B8-sExuu55AdA" title="Logout"></iframe>
+        <iframe width="0" height="0" class="signout" src="https://idm-trovrent-us-dev.macronlabs.com/connect/endsession/callback?endSessionId=CfDJ8FMyAbAOZQpGvcmHt-C9xTLxHr_1PCVjSMlY4IflNp2BZOFkOtwIgogNlL0yogoEaYkgOZxhOGY0t9jMnO0pMqLPtSwu8DwUXrrBMzVYhGYrzaItD2L48iGBVe2pkyZV6Li4hJvcRahAw_p4sVwiGW19-kUIVtfDzn8rq26E0tdD4hKsmutBG5I-oZKe61b1e4S36EAPnxQPhKeAcCvaQmbOceJLx8sL1CyBp9EPNMUIZLb60ACxCO8DcCGZ-gVdl8oPHYs1cCyRH5PUMRamC_d4A1TKBshO3G47r-j2JO-Dwzm-pFwdy56cJgaTTuMKWqsJTeApBl6icNfkIsscFYc" title="Logout"></iframe>
     </div>
-
 
 
 
 </div>
 
-<script src="/dist/js/bundle.js"></script>
+<script src="https://idm-trovrent-us-stage.gaullabs.net/dist/js/bundle.js"></script>
 
 <!--<script src="https://trov-develop-renters-gb.s3.us-west-1.amazonaws.com/templates/identityserver/halifax.app.js"></script>-->
 <div class="copyright-text">

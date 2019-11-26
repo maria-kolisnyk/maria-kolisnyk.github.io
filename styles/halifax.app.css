@@ -156,6 +156,7 @@ input::placeholder {
 }
 
 .button,
+.signedout-form .btn-default,
 .login-button,
 .forgot-passwrod-button,
 .set-password-button{
@@ -170,13 +171,16 @@ input::placeholder {
     letter-spacing: -0.09px;
     text-transform: capitalize;
     font-family: 'Source Sans Pro Semi Bold', sans-serif;
+    border: none;
 }
 
 .button:hover,
 .login-button:hover,
 .forgot-passwrod-button:hover,
-.set-password-button:hover{
+.set-password-button:hover,
+.signedout-form .btn-default:hover{
     background-color: #071d49;
+    border: none;
 }
 
 .button:focus,
