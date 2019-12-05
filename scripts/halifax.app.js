@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const passwordLength = /(?=.{8,})/.test(password);
             const containsDigits = /[0-9]/.test(password);
-            const containsSpecial = /[@%+\\/'!#$^&?:.(){}[\]~]/.test(password);
+            const containsSpecial = /[@%+\\/'`!*<>"=;#$£^&?:,.(){}[\]~_-]/.test(password);
             const containsUpper = /[A-Z]/.test(password);
             const containsLower = /[a-z]/.test(password);
 
