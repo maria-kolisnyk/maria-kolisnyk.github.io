@@ -586,6 +586,10 @@ input::-ms-reveal {
     padding: 0;
 }
 
+input[type=hidden]{
+    color: transparent;
+}
+
 @media screen and (max-width: 699px) {
     .login-form {
         width: 340px;

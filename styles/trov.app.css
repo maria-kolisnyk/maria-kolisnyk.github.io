@@ -415,6 +415,10 @@ input::-ms-reveal {
     font-size: 16px;
 }
 
+input[type=hidden]{
+    color: transparent;
+}
+
 @media screen and (max-width: 699px) {
     .footer-bar {
         padding: 50px 30px 60px;
