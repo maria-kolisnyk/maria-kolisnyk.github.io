@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    function initiateFooter(){
+    function initiateFooter() {
         const footerBlock = document.getElementsByClassName('footer-bar')[0];
 
-        const innerSection = '<div class="footer-container">\n' +
+        const innerSection =
+            '<div class="footer-container">\n' +
             '        <ul>\n' +
             '            <li>\n' +
             '                <a href="https://www.halifax.co.uk/insurance/home-insurance/app/short-privacy-policy/" target="_blank">Privacy Policy</a>\n' +
@@ -31,11 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     initiateFooter();
 
-    function initiatePolicy(){
-        const passwordPolicy = document.getElementsByClassName('password-policy')[0];
-        const innerPolicy = '<p>Your password must contain at least <strong>8 characters</strong> containing <strong>uppercase</strong>, <strong>lowercase</strong>, <strong>a number</strong>, and <strong>a special character</strong>.</p>';
+    function initiatePolicy() {
+        const passwordPolicyMessage = document.getElementById('passwordPolicyMessage');
+        const parentDiv = passwordPolicyMessage.parentNode;
+        const passwordPolicy = document.createElement('div');
+        passwordPolicy.setAttribute('class', 'password-policy');
+        const innerPolicy =
+            '<p>Your password must contain at least <strong>8 characters</strong> containing <strong>uppercase</strong>, <strong>lowercase</strong>, <strong>a number</strong>, and <strong>a special character</strong>.</p>';
 
-        if(passwordPolicy){
+        if (passwordPolicyMessage) {
+            parentDiv.replaceChild(passwordPolicy, passwordPolicyMessage);
             passwordPolicy.innerHTML = innerPolicy;
         }
     }
@@ -43,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const input = document.getElementById('txtNewPassword');
 
-    if(input){
-        input.oninput = function(){
+    if (input) {
+        input.oninput = function() {
             const password = input.value;
 
             const passwordLength = /(?=.{8,})/.test(password);
@@ -53,61 +59,82 @@ document.addEventListener('DOMContentLoaded', function() {
             const containsUpper = /[A-Z]/.test(password);
             const containsLower = /[a-z]/.test(password);
 
-            const length = passwordLength ? '<strong class="done">8 characters</strong>' : '<strong>8 characters</strong>';
-            const digits = containsDigits ? '<strong class="done">a number</strong>' : '<strong>a number</strong>';
-            const special = containsSpecial ? '<strong class="done">a special character</strong>' : '<strong>a special character</strong>';
-            const uppercase = containsUpper ? '<strong class="done">uppercase</strong>' : '<strong>uppercase</strong>';
-            const lowercase = containsLower ? '<strong class="done">lowercase</strong>' : '<strong>lowercase</strong>';
+            const length = passwordLength
+                ? '<strong class="done">8 characters</strong>'
+                : '<strong>8 characters</strong>';
+            const digits = containsDigits
+                ? '<strong class="done">a number</strong>'
+                : '<strong>a number</strong>';
+            const special = containsSpecial
+                ? '<strong class="done">a special character</strong>'
+                : '<strong>a special character</strong>';
+            const uppercase = containsUpper
+                ? '<strong class="done">uppercase</strong>'
+                : '<strong>uppercase</strong>';
+            const lowercase = containsLower
+                ? '<strong class="done">lowercase</strong>'
+                : '<strong>lowercase</strong>';
 
             const passwordPolicy = document.getElementsByClassName('password-policy')[0];
 
-            const innerPolicy = '<p>Your password must contain at least ' + length + ' containing ' + uppercase + ', ' + lowercase + ', ' + digits + ', and ' + special + '</p>';
+            const innerPolicy =
+                '<p>Your password must contain at least ' +
+                length +
+                ' containing ' +
+                uppercase +
+                ', ' +
+                lowercase +
+                ', ' +
+                digits +
+                ', and ' +
+                special +
+                '</p>';
 
             passwordPolicy.innerHTML = innerPolicy;
         };
 
-        let observer = new MutationObserver(function(mutations) {
+        const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
-                if(mutation.target.classList.contains('input-validation-error')){
+                if (mutation.target.classList.contains('input-validation-error')) {
                     const passwordPolicy = document.getElementsByClassName('password-policy')[0];
                     passwordPolicy.classList.add('has-error');
                 }
             });
         });
-        let config = { attributes: true, childList: true, characterData: true };
+        const config = { attributes: true, characterData: true, childList: true };
         observer.observe(input, config);
     }
 
     const txtUsername = document.getElementById('txtUsername');
 
-    if(txtUsername){
+    if (txtUsername) {
         txtUsername.placeholder = 'Enter your email address';
     }
 
     const formHeader = document.getElementsByClassName('form-header')[0];
     const text = formHeader.innerText;
-    if(text === 'Sign in to continue.'){
+    if (text === 'Sign in to continue.') {
         formHeader.innerText = 'Sign In to Continue';
     }
 
-
     const setPasswordButton = document.getElementsByClassName('set-password-button-text')[0];
-    if(setPasswordButton){
+    if (setPasswordButton) {
         setPasswordButton.innerHTML = setPasswordButton.innerHTML.toLowerCase();
     }
 
     function changeFavicon() {
-        let oldLink = document.querySelector('link[rel*=\'icon\']');
-        let old_Link = document.querySelector('link[rel*=\'shortcut icon\']');
+        const oldLink = document.querySelector("link[rel*='icon']");
+        const old_Link = document.querySelector("link[rel*='shortcut icon']");
 
-        let link = document.createElement('link');
+        const link = document.createElement('link');
         link.type = 'image/x-icon';
         link.rel = 'shortcut icon';
-        link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAjtJREFUOBFjZIjb8Z+BCoCJCmaAjRh8BrGA3FUfoMxQ5auE4svvv/4yePScZThx9yNYvMhdnqE9TA1FzY/f/xhCJl9g2H31LQMzg35Mw8Eb7xm42JgZHDSFGJiZGMGYg5WZIchYjGHLhdcMPgZiDNPiteByIDV//v5nCJtygWHnlbdgw+FhVLXmNkPbpnsoNgrxsDHsLDUBG/D3HyJyfwJdEjTpPMO2S2/g6hlB0a8sxsnw5vNvBjYWRgZtaR4GRqA0CzMjw9effxk4gS798uMPg4wQB8P3X//A4jeff2VgZGRkePLuB4MAFwvDk/c/GcBh1An0++wDTxjkhDkZzJT4GT4DNb789Ith37W3DMZSPAwS/GwM4vzsDEuOPWOYFKPJ0LLpLoOligCDijgXQ9Xq22CDwF4DuaLUSxHsBR0ZHgYLoCJ0ANKkKMrJ8OLjT4ZgEwmGzedfMyiKcDFcffoFrBTstY5QVYaN514xWKkKgA0DBfw3oLdMgK47fucDOGCvADUoinCCvWurLggWO/PgIzhIdlx+AwwOpCwC8kJDgAo4HJBdtOjIUwZ/Y3EGfk5wSIBdVb/uDgMw4uAAIgPkggzZX2HKoAEME2SwEGhIANCQQg8FZGEGVXFuhugZlxj+QGMTbBAuQ7ZceMWQMvcq2JJgU3FwZMBMCzOXADNhhoG9lu4ow6AhyQ1TA6ZBUd288S7Dd2CaAQE1YGBnOsuC2cjEJmCg77/+DjWMkBWQyoanbFI1oqunmkEAo7vF4+Woo1YAAAAASUVORK5CYII=';
+        link.href =
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAjtJREFUOBFjZIjb8Z+BCoCJCmaAjRh8BrGA3FUfoMxQ5auE4svvv/4yePScZThx9yNYvMhdnqE9TA1FzY/f/xhCJl9g2H31LQMzg35Mw8Eb7xm42JgZHDSFGJiZGMGYg5WZIchYjGHLhdcMPgZiDNPiteByIDV//v5nCJtygWHnlbdgw+FhVLXmNkPbpnsoNgrxsDHsLDUBG/D3HyJyfwJdEjTpPMO2S2/g6hlB0a8sxsnw5vNvBjYWRgZtaR4GRqA0CzMjw9effxk4gS798uMPg4wQB8P3X//A4jeff2VgZGRkePLuB4MAFwvDk/c/GcBh1An0++wDTxjkhDkZzJT4GT4DNb789Ith37W3DMZSPAwS/GwM4vzsDEuOPWOYFKPJ0LLpLoOligCDijgXQ9Xq22CDwF4DuaLUSxHsBR0ZHgYLoCJ0ANKkKMrJ8OLjT4ZgEwmGzedfMyiKcDFcffoFrBTstY5QVYaN514xWKkKgA0DBfw3oLdMgK47fucDOGCvADUoinCCvWurLggWO/PgIzhIdlx+AwwOpCwC8kJDgAo4HJBdtOjIUwZ/Y3EGfk5wSIBdVb/uDgMw4uAAIgPkggzZX2HKoAEME2SwEGhIANCQQg8FZGEGVXFuhugZlxj+QGMTbBAuQ7ZceMWQMvcq2JJgU3FwZMBMCzOXADNhhoG9lu4ow6AhyQ1TA6ZBUd288S7Dd2CaAQE1YGBnOsuC2cjEJmCg77/+DjWMkBWQyoanbFI1oqunmkEAo7vF4+Woo1YAAAAASUVORK5CYII=';
         document.head.removeChild(oldLink);
         document.head.removeChild(old_Link);
         document.getElementsByTagName('head')[0].appendChild(link);
-    };
+    }
 
     changeFavicon();
 });
