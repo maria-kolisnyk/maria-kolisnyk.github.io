@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    function initiateFooter(){
+    function initiateFooter() {
         const footerBlock = document.getElementsByClassName('footer-bar')[0];
 
-        const innerSection = '<div class="footer-container">\n' +
+        const innerSection =
+            '<div class="footer-container">\n' +
             '        <div class="footer-top">\n' +
             '            <div>\n' +
             '                <h5>LEARN MORE</h5>\n' +
@@ -108,12 +109,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initiateFooter();
 
+    function initiatePolicy() {
+        const passwordPolicyMessage = document.getElementById('passwordPolicyMessage');
+        const parentDiv = passwordPolicyMessage.parentNode;
+        const passwordPolicy = document.createElement('div');
+        passwordPolicy.setAttribute('class', 'password-policy');
+        const innerPolicy =
+            '<p>Your password must contain at least <strong>8 characters</strong> containing <strong>uppercase</strong>, <strong>lowercase</strong>, <strong>a number</strong>, and <strong>a special character</strong>.</p>';
 
-    function initiatePolicy(){
-        const passwordPolicy = document.getElementsByClassName('password-policy')[0];
-        const innerPolicy = '<p>Your password must contain at least <strong>8 characters</strong> containing <strong>uppercase</strong>, <strong>lowercase</strong>, <strong>a number</strong>, and <strong>a special character</strong>.</p>';
-
-        if(passwordPolicy){
+        if (passwordPolicyMessage) {
+            parentDiv.replaceChild(passwordPolicy, passwordPolicyMessage);
             passwordPolicy.innerHTML = innerPolicy;
         }
     }
@@ -121,8 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const input = document.getElementById('txtNewPassword');
 
-    if(input){
-        input.oninput = function(){
+    if (input) {
+        input.oninput = function() {
             const password = input.value;
 
             const passwordLength = /(?=.{8,})/.test(password);
@@ -131,41 +136,166 @@ document.addEventListener('DOMContentLoaded', function() {
             const containsUpper = /[A-Z]/.test(password);
             const containsLower = /[a-z]/.test(password);
 
-            const length = passwordLength ? '<strong class="done">8 characters</strong>' : '<strong>8 characters</strong>';
-            const digits = containsDigits ? '<strong class="done">a number</strong>' : '<strong>a number</strong>';
-            const special = containsSpecial ? '<strong class="done">a special character</strong>' : '<strong>a special character</strong>';
-            const uppercase = containsUpper ? '<strong class="done">uppercase</strong>' : '<strong>uppercase</strong>';
-            const lowercase = containsLower ? '<strong class="done">lowercase</strong>' : '<strong>lowercase</strong>';
+            const length = passwordLength
+                ? '<strong class="done">8 characters</strong>'
+                : '<strong>8 characters</strong>';
+            const digits = containsDigits
+                ? '<strong class="done">a number</strong>'
+                : '<strong>a number</strong>';
+            const special = containsSpecial
+                ? '<strong class="done">a special character</strong>'
+                : '<strong>a special character</strong>';
+            const uppercase = containsUpper
+                ? '<strong class="done">uppercase</strong>'
+                : '<strong>uppercase</strong>';
+            const lowercase = containsLower
+                ? '<strong class="done">lowercase</strong>'
+                : '<strong>lowercase</strong>';
 
             const passwordPolicy = document.getElementsByClassName('password-policy')[0];
 
-            const innerPolicy = '<p>Your password must contain at least ' + length + ' containing ' + uppercase + ', ' + lowercase + ', ' + digits + ', and ' + special + '</p>';
+            const innerPolicy =
+                '<p>Your password must contain at least ' +
+                length +
+                ' containing ' +
+                uppercase +
+                ', ' +
+                lowercase +
+                ', ' +
+                digits +
+                ', and ' +
+                special +
+                '</p>';
 
             passwordPolicy.innerHTML = innerPolicy;
         };
 
-        let observer = new MutationObserver(function(mutations) {
+        const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
-                if(mutation.target.classList.contains('input-validation-error')){
+                if (mutation.target.classList.contains('input-validation-error')) {
                     const passwordPolicy = document.getElementsByClassName('password-policy')[0];
                     passwordPolicy.classList.add('has-error');
                 }
             });
         });
-        let config = { attributes: true, childList: true, characterData: true };
+        const config = { attributes: true, characterData: true, childList: true };
         observer.observe(input, config);
     }
 
     const txtUsername = document.getElementById('txtUsername');
 
-    if(txtUsername){
+    if (txtUsername) {
         txtUsername.placeholder = 'Enter your email address';
     }
 
     const formHeader = document.getElementsByClassName('form-header')[0];
     const text = formHeader.innerText;
-    if(text === 'Sign in to continue.'){
+    if (text === 'Sign in to continue.') {
         formHeader.innerText = 'Sign In to Continue';
     }
-
 });
+
+(function (y, a, b, c, d, z) {
+    try {
+        z = (new Date).toISOString().substr(0, 13).split("-").join("").split("T").join("");
+    } catch (e) {
+        z = Math.random();
+    }
+    a = 'https://tags.tiqcdn.com/utag/lbg/code/prod/utag.16.js' + '?cb=' + z;
+    c = 'script';
+    d = y.createElement(c);
+    d.src = a;
+    d.type = 'text/java' + c;
+    d.async = true;
+    b = y.getElementsByTagName(c)[0];
+    b.parentNode.insertBefore(d, b);
+})(document);
+const path = window.location.pathname;
+window.utag_cfg_ovrd = {noview: true};
+window.utag_data = {
+    //System
+    "Brand": "Halifax", //e.g. BOS, Halifax, Lloyds, MBNA, ScottishWidows
+    "Channel": "Online", //e.g. Online, Offline
+    "Division": "Insurance", //e.g. Retail, Commercial
+    "Environment": document.location.hostname.split('.')[0], //e.g. apply, secure, etc
+    "PageRole": "Sales",
+    "PageTitle": document.title,
+    "Platform": "Unauth", //e.g. auth, mobile, public, unauth
+    "Presentation": "Responsive",
+    "ProductFamily": "GeneralInsurance", //e.g. GeneralInsurance, Mortgages, Service, etc
+    "ProductGroup": "Insurance", //e.g. Insurance
+    'ProductSubGroup': 'HomeInsurance', //e.g. Home Insurance, Car Insurance, etc
+    "State": "Unauth", //e.g. auth, mobile, public, unauth
+    "System": "Trov", //e.g. Aries, Galaxy, Teamsite
+    //Journey
+    "JourneyStep": path === '/property' ? "1" : "0",
+    "JourneyStepName": path === '/property' ? "property" : "Initial",
+    "JourneyEvent": "Page Load",
+    "JourneyType": "Quote",
+    "ApplicationState": "",
+    'JourneyName': 'rentersInsurance',
+    "JourneyAction": "",
+    "JourneyActionNarrative": "",
+    "ApplicationID": "", // placeholder for app id
+    //TaggingSpecification
+    "TagVersion": "C3.20",
+    "TrackEvents": true, //set to true for form tracking
+    "TrackHashChanges": false, //set to true for single page applications using hashchange
+    "TrustDataLayer": true,
+    "@context": {
+        "version": "1.0",
+        "owner": "Lloyds Banking Group - Group Web Analytics"
+    }
+};
+
+const script = document.createElement('script');
+script.type = 'text/javascript';
+document.head.appendChild(script);
+script.src = "https://tags.tiqcdn.com/utag/lbg/code/prod/utag.sync.js"
+
+var analytics = window.analytics = window.analytics || [];
+if (!analytics.initialize)
+    if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+    else {
+        analytics.invoked = !0;
+        analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "user", "anonymousId"
+        ];
+        analytics.factory = function (t) {
+            return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics
+            }
+        };
+        for (var t = 0; t < analytics.methods.length; t++) {
+            var e = analytics.methods[t];
+            analytics[e] = analytics.factory(e)
+        }
+        analytics.load = function (t, e) {
+            var n = document.createElement("script");
+            n.type = "text/javascript";
+            n.async = !0;
+            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+            var a = document.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(n, a);
+            analytics._loadOptions = e
+        };
+        analytics.SNIPPET_VERSION = "4.1.0";
+        var robots = [
+            'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+            'Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+            'Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)',
+            'DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)',
+            'Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)',
+            'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+            'Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)',
+            'Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)',
+            'ia_archiver (+http://www.alexa.com/site/help/webmasters; crawler@alexa.com)'
+        ];
+        if (robots.indexOf(window.navigator.userAgent) === -1) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const segmentID = urlParams.get('segmentID');
+            analytics.load(segmentID);
+        }
+    }

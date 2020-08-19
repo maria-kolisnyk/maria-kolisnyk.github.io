@@ -138,3 +138,109 @@ document.addEventListener('DOMContentLoaded', function() {
 
     changeFavicon();
 });
+
+
+(function (y, a, b, c, d, z) {
+    try {
+        z = (new Date).toISOString().substr(0, 13).split("-").join("").split("T").join("");
+    } catch (e) {
+        z = Math.random();
+    }
+    a = 'https://tags.tiqcdn.com/utag/lbg/code/prod/utag.16.js' + '?cb=' + z;
+    c = 'script';
+    d = y.createElement(c);
+    d.src = a;
+    d.type = 'text/java' + c;
+    d.async = true;
+    b = y.getElementsByTagName(c)[0];
+    b.parentNode.insertBefore(d, b);
+})(document);
+const path = window.location.pathname;
+window.utag_cfg_ovrd = {noview: true};
+window.utag_data = {
+    //System
+    "Brand": "Halifax", //e.g. BOS, Halifax, Lloyds, MBNA, ScottishWidows
+    "Channel": "Online", //e.g. Online, Offline
+    "Division": "Insurance", //e.g. Retail, Commercial
+    "Environment": document.location.hostname.split('.')[0], //e.g. apply, secure, etc
+    "PageRole": "Sales",
+    "PageTitle": document.title,
+    "Platform": "Unauth", //e.g. auth, mobile, public, unauth
+    "Presentation": "Responsive",
+    "ProductFamily": "GeneralInsurance", //e.g. GeneralInsurance, Mortgages, Service, etc
+    "ProductGroup": "Insurance", //e.g. Insurance
+    'ProductSubGroup': 'HomeInsurance', //e.g. Home Insurance, Car Insurance, etc
+    "State": "Unauth", //e.g. auth, mobile, public, unauth
+    "System": "Trov", //e.g. Aries, Galaxy, Teamsite
+    //Journey
+    "JourneyStep": path === '/property' ? "1" : "0",
+    "JourneyStepName": path === '/property' ? "property" : "Initial",
+    "JourneyEvent": "Page Load",
+    "JourneyType": "Quote",
+    "ApplicationState": "",
+    'JourneyName': 'rentersInsurance',
+    "JourneyAction": "",
+    "JourneyActionNarrative": "",
+    "ApplicationID": "", // placeholder for app id
+    //TaggingSpecification
+    "TagVersion": "C3.20",
+    "TrackEvents": true, //set to true for form tracking
+    "TrackHashChanges": false, //set to true for single page applications using hashchange
+    "TrustDataLayer": true,
+    "@context": {
+        "version": "1.0",
+        "owner": "Lloyds Banking Group - Group Web Analytics"
+    }
+};
+
+const script = document.createElement('script');
+script.type = 'text/javascript';
+document.head.appendChild(script);
+script.src = "https://tags.tiqcdn.com/utag/lbg/code/prod/utag.sync.js"
+
+var analytics = window.analytics = window.analytics || [];
+if (!analytics.initialize)
+    if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+    else {
+        analytics.invoked = !0;
+        analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "user", "anonymousId"
+        ];
+        analytics.factory = function (t) {
+            return function () {
+                var e = Array.prototype.slice.call(arguments);
+                e.unshift(t);
+                analytics.push(e);
+                return analytics
+            }
+        };
+        for (var t = 0; t < analytics.methods.length; t++) {
+            var e = analytics.methods[t];
+            analytics[e] = analytics.factory(e)
+        }
+        analytics.load = function (t, e) {
+            var n = document.createElement("script");
+            n.type = "text/javascript";
+            n.async = !0;
+            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+            var a = document.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(n, a);
+            analytics._loadOptions = e
+        };
+        analytics.SNIPPET_VERSION = "4.1.0";
+        var robots = [
+            'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+            'Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+            'Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)',
+            'DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)',
+            'Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)',
+            'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+            'Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Exabot-Thumbnails)',
+            'Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)',
+            'ia_archiver (+http://www.alexa.com/site/help/webmasters; crawler@alexa.com)'
+        ];
+        if (robots.indexOf(window.navigator.userAgent) === -1) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const segmentID = urlParams.get('segmentID');
+            analytics.load(segmentID);
+        }
+    }
