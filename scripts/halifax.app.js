@@ -32,15 +32,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     initiateFooter();
 
+    function addToLoginForm() {
+        const loginForm = document.getElementById('loginForm');
+        const urlParams = new URLSearchParams(window.location.search);
+        const returnUrl = urlParams.get('ReturnUrl');
+        const returnUrlParams = new URLSearchParams(returnUrl);
+        const redirect_uri = returnUrlParams.get('redirect_uri');
+        const create_password_link =
+            redirect_uri.substring(0, redirect_uri.indexOf('loginSuccessful')) + 'confirm-email';
+
+        const innerSection =
+            '<div class="row create-password-link">' +
+            '<p>Need to finish setting up your account? </p>' +
+            '<a href="' +
+            create_password_link +
+            '">Create Password</a>' +
+            '</div>';
+
+        loginForm.innerHTML += innerSection;
+    }
+    addToLoginForm();
+
     function initiatePolicy() {
         const passwordPolicyMessage = document.getElementById('passwordPolicyMessage');
-        const parentDiv = passwordPolicyMessage.parentNode;
-        const passwordPolicy = document.createElement('div');
-        passwordPolicy.setAttribute('class', 'password-policy');
-        const innerPolicy =
-            '<p>Your password must contain at least <strong>8 characters</strong> containing <strong>uppercase</strong>, <strong>lowercase</strong>, <strong>a number</strong>, and <strong>a special character</strong>.</p>';
 
         if (passwordPolicyMessage) {
+            const parentDiv = passwordPolicyMessage.parentNode;
+            const passwordPolicy = document.createElement('div');
+            passwordPolicy.setAttribute('class', 'password-policy');
+            const innerPolicy =
+                '<p>Your password must contain at least <strong>8 characters</strong> containing <strong>uppercase</strong>, <strong>lowercase</strong>, <strong>a number</strong>, and <strong>a special character</strong>.</p>';
+
             parentDiv.replaceChild(passwordPolicy, passwordPolicyMessage);
             passwordPolicy.innerHTML = innerPolicy;
         }
@@ -139,10 +161,15 @@ document.addEventListener('DOMContentLoaded', function() {
     changeFavicon();
 });
 
-
-(function (y, a, b, c, d, z) {
+(function(y, a, b, c, d, z) {
     try {
-        z = (new Date).toISOString().substr(0, 13).split("-").join("").split("T").join("");
+        z = new Date()
+            .toISOString()
+            .substr(0, 13)
+            .split('-')
+            .join('')
+            .split('T')
+            .join('');
     } catch (e) {
         z = Math.random();
     }
@@ -156,78 +183,98 @@ document.addEventListener('DOMContentLoaded', function() {
     b.parentNode.insertBefore(d, b);
 })(document);
 const path = window.location.pathname;
-window.utag_cfg_ovrd = {noview: true};
+window.utag_cfg_ovrd = { noview: true };
 window.utag_data = {
     //System
-    "Brand": "Halifax", //e.g. BOS, Halifax, Lloyds, MBNA, ScottishWidows
-    "Channel": "Online", //e.g. Online, Offline
-    "Division": "Insurance", //e.g. Retail, Commercial
-    "Environment": document.location.hostname.split('.')[0], //e.g. apply, secure, etc
-    "PageRole": "Sales",
-    "PageTitle": document.title,
-    "Platform": "Unauth", //e.g. auth, mobile, public, unauth
-    "Presentation": "Responsive",
-    "ProductFamily": "GeneralInsurance", //e.g. GeneralInsurance, Mortgages, Service, etc
-    "ProductGroup": "Insurance", //e.g. Insurance
-    'ProductSubGroup': 'HomeInsurance', //e.g. Home Insurance, Car Insurance, etc
-    "State": "Unauth", //e.g. auth, mobile, public, unauth
-    "System": "Trov", //e.g. Aries, Galaxy, Teamsite
+    '@context': {
+        owner: 'Lloyds Banking Group - Group Web Analytics',
+        version: '1.0'
+    }, //e.g. BOS, Halifax, Lloyds, MBNA, ScottishWidows
+    'ApplicationID': '', //e.g. Online, Offline
+    'ApplicationState': '', //e.g. Retail, Commercial
+    'Brand': 'Halifax', //e.g. apply, secure, etc
+    'Channel': 'Online',
+    'Division': 'Insurance',
+    'Environment': document.location.hostname.split('.')[0], //e.g. auth, mobile, public, unauth
+    'JourneyAction': '',
+    'JourneyActionNarrative': '', //e.g. GeneralInsurance, Mortgages, Service, etc
+    'JourneyEvent': 'Page Load', //e.g. Insurance
+    'JourneyName': 'rentersInsurance', //e.g. Home Insurance, Car Insurance, etc
+    'JourneyStep': path === '/property' ? '1' : '0', //e.g. auth, mobile, public, unauth
+    'JourneyStepName': path === '/property' ? 'property' : 'Initial', //e.g. Aries, Galaxy, Teamsite
     //Journey
-    "JourneyStep": path === '/property' ? "1" : "0",
-    "JourneyStepName": path === '/property' ? "property" : "Initial",
-    "JourneyEvent": "Page Load",
-    "JourneyType": "Quote",
-    "ApplicationState": "",
-    'JourneyName': 'rentersInsurance',
-    "JourneyAction": "",
-    "JourneyActionNarrative": "",
-    "ApplicationID": "", // placeholder for app id
+    'JourneyType': 'Quote',
+    'PageRole': 'Sales',
+    'PageTitle': document.title,
+    'Platform': 'Unauth',
+    'Presentation': 'Responsive',
+    'ProductFamily': 'GeneralInsurance',
+    'ProductGroup': 'Insurance',
+    'ProductSubGroup': 'HomeInsurance',
+    'State': 'Unauth', // placeholder for app id
     //TaggingSpecification
-    "TagVersion": "C3.20",
-    "TrackEvents": true, //set to true for form tracking
-    "TrackHashChanges": false, //set to true for single page applications using hashchange
-    "TrustDataLayer": true,
-    "@context": {
-        "version": "1.0",
-        "owner": "Lloyds Banking Group - Group Web Analytics"
-    }
+    'System': 'Trov',
+    'TagVersion': 'C3.20', //set to true for form tracking
+    'TrackEvents': true, //set to true for single page applications using hashchange
+    'TrackHashChanges': false,
+    'TrustDataLayer': true
 };
 
 const script = document.createElement('script');
 script.type = 'text/javascript';
 document.head.appendChild(script);
-script.src = "https://tags.tiqcdn.com/utag/lbg/code/prod/utag.sync.js"
+script.src = 'https://tags.tiqcdn.com/utag/lbg/code/prod/utag.sync.js';
 
-var analytics = window.analytics = window.analytics || [];
+const analytics = (window.analytics = window.analytics || []);
 if (!analytics.initialize)
-    if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+    if (analytics.invoked)
+        window.console && console.error && console.error('Segment snippet included twice.');
     else {
         analytics.invoked = !0;
-        analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "user", "anonymousId"
+        analytics.methods = [
+            'trackSubmit',
+            'trackClick',
+            'trackLink',
+            'trackForm',
+            'pageview',
+            'identify',
+            'reset',
+            'group',
+            'track',
+            'ready',
+            'alias',
+            'debug',
+            'page',
+            'once',
+            'off',
+            'on',
+            'user',
+            'anonymousId'
         ];
-        analytics.factory = function (t) {
-            return function () {
-                var e = Array.prototype.slice.call(arguments);
+        analytics.factory = function(t) {
+            return function() {
+                // eslint-disable-next-line prefer-rest-params
+                const e = Array.prototype.slice.call(arguments);
                 e.unshift(t);
                 analytics.push(e);
-                return analytics
-            }
+                return analytics;
+            };
         };
-        for (var t = 0; t < analytics.methods.length; t++) {
-            var e = analytics.methods[t];
-            analytics[e] = analytics.factory(e)
+        for (let t = 0; t < analytics.methods.length; t++) {
+            const e = analytics.methods[t];
+            analytics[e] = analytics.factory(e);
         }
-        analytics.load = function (t, e) {
-            var n = document.createElement("script");
-            n.type = "text/javascript";
+        analytics.load = function(t, e) {
+            const n = document.createElement('script');
+            n.type = 'text/javascript';
             n.async = !0;
-            n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
-            var a = document.getElementsByTagName("script")[0];
+            n.src = 'https://cdn.segment.com/analytics.js/v1/' + t + '/analytics.min.js';
+            const a = document.getElementsByTagName('script')[0];
             a.parentNode.insertBefore(n, a);
-            analytics._loadOptions = e
+            analytics._loadOptions = e;
         };
-        analytics.SNIPPET_VERSION = "4.1.0";
-        var robots = [
+        analytics.SNIPPET_VERSION = '4.1.0';
+        const robots = [
             'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
             'Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)',
             'Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)',
@@ -240,7 +287,9 @@ if (!analytics.initialize)
         ];
         if (robots.indexOf(window.navigator.userAgent) === -1) {
             const urlParams = new URLSearchParams(window.location.search);
-            const segmentID = urlParams.get('segmentID');
+            const returnUrl = urlParams.get('ReturnUrl');
+            const returnUrlParams = new URLSearchParams(returnUrl);
+            const segmentID = returnUrlParams.get('segmentID');
             analytics.load(segmentID);
         }
     }

@@ -587,6 +587,24 @@ input::-ms-reveal {
     padding: 0;
 }
 
+.create-password-link{
+    padding-top: 25px;
+}
+.create-password-link p{
+    font-family: 'Source Sans Pro Regular', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #071d49;
+    margin: 0;
+}
+.create-password-link a{  width: 302px;
+    height: 24px;
+    font-family: 'Source Sans Pro Semi Bold';
+    font-size: 16px;
+    line-height: 1.5;
+    color: #005eb8;
+}
+
 input.hidden{
     color: transparent;
 }
