@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="https://jsagent.tcell.io/tcellagent.min.js" tcellappid="netCoreproject-hXcJx" tcellapikey="AQQBBAFXstS7SqFFkp2eDE6mPplNbCYEj7UhT4mAVaS84yd66k5TVxoYLCXcNMtdi-AguwA" tcellbaseurl="https://us.agent.tcell.insight.rapid7.com/api/v1"></script>
+<html lang="en-us"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDM</title>
-    <link rel="stylesheet" href="https://idm-trovrent-us-dev.macronlabs.com/lib/bootstrap/css/bootstrap.css">
+    <title>Account recovery</title>
+
+
+    <link rel="stylesheet" href="https://idm-trovrent-us-dev.macronlabs.com/dist/css/vendor_bundle.css">
     <link rel="stylesheet" href="https://idm-trovrent-us-dev.macronlabs.com/dist/css/trov.app.css">
-    <link id="customStyle" rel="stylesheet" href="styles/halifax.app.css">
-    <script src="scripts/halifax.app.js"></script>
-</head>
+
+    <link id="customStyle" rel="stylesheet" href="styles/lloyds.app.css">
+    <script src="//tags.tiqcdn.com/utag/lbg/main/prod/utag.js" type="text/javascript" async=""></script><script type="text/javascript" async="" src="https://cdn.segment.com/analytics.js/v1/null/analytics.min.js"></script><script src="https://tags.tiqcdn.com/utag/lbg/code/prod/utag.16.js?cb=2020122409" type="text/javascript" async=""></script>
+    <script src="https://idm-trovrent-us-dev.macronlabs.com/dist/js/vendors_bundle.js"></script>
+    <script type="text/javascript" src="https://tags.tiqcdn.com/utag/lbg/code/prod/utag.sync.js"></script><link type="image/x-icon" rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAjtJREFUOBFjZIjb8Z+BCoCJCmaAjRh8BrGA3FUfoMxQ5auE4svvv/4yePScZThx9yNYvMhdnqE9TA1FzY/f/xhCJl9g2H31LQMzg35Mw8Eb7xm42JgZHDSFGJiZGMGYg5WZIchYjGHLhdcMPgZiDNPiteByIDV//v5nCJtygWHnlbdgw+FhVLXmNkPbpnsoNgrxsDHsLDUBG/D3HyJyfwJdEjTpPMO2S2/g6hlB0a8sxsnw5vNvBjYWRgZtaR4GRqA0CzMjw9effxk4gS798uMPg4wQB8P3X//A4jeff2VgZGRkePLuB4MAFwvDk/c/GcBh1An0++wDTxjkhDkZzJT4GT4DNb789Ith37W3DMZSPAwS/GwM4vzsDEuOPWOYFKPJ0LLpLoOligCDijgXQ9Xq22CDwF4DuaLUSxHsBR0ZHgYLoCJ0ANKkKMrJ8OLjT4ZgEwmGzedfMyiKcDFcffoFrBTstY5QVYaN514xWKkKgA0DBfw3oLdMgK47fucDOGCvADUoinCCvWurLggWO/PgIzhIdlx+AwwOpCwC8kJDgAo4HJBdtOjIUwZ/Y3EGfk5wSIBdVb/uDgMw4uAAIgPkggzZX2HKoAEME2SwEGhIANCQQg8FZGEGVXFuhugZlxj+QGMTbBAuQ7ZceMWQMvcq2JJgU3FwZMBMCzOXADNhhoG9lu4ow6AhyQ1TA6ZBUd288S7Dd2CaAQE1YGBnOsuC2cjEJmCg77/+DjWMkBWQyoanbFI1oqunmkEAo7vF4+Woo1YAAAAASUVORK5CYII="><meta name="DCSext.hasTealium" content="1"><script type="text/javascript" async="" charset="utf-8" id="utag_lbg.main_1072" src="//tags.tiqcdn.com/utag/lbg/main/prod/utag.1072.js?utv=ut4.46.202012181841"></script><script charset="UTF-8" src="https://lptag.liveperson.net/tag/tag.js?site=49955747"></script></head>
 <body>
 <div class="row container body-content col-12">
     <div class="Header">
@@ -18,7 +19,6 @@
             <div class="trovBlue" alt="Logo"></div>
         </div>
     </div>
-
 
     <div class="account-page col-12">
         <div class="main-block">
@@ -29,71 +29,63 @@
                 <form id="forgotPasswordForm" class="form" action="" method="post" novalidate="novalidate">
                     <span class="helper"></span>
                     <div class="hint-container">
-                    <span id="lblHintText" class="hint-text">
+                    <span id="lblHintText" class="hint-text" tabindex="-1">
                         Enter the email address registered to your account and we'll send you a link to reset your password.
                     </span>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=halifax-web-client&amp;redirect_uri=https%3A%2F%2Ftrovrent-gb-dev-webrenters-halifax.macronlabs.com%2FloginSuccessful&amp;response_type=id_token%20token&amp;scope=openid%20profile%20email%20trov.renters.api.client&amp;state=e5ebb60fe3624f429f9d8bf186b15462&amp;nonce=2d81cff83a90451099e9426ef64a6b0e">
-                        <input type="hidden" id="TenantConfiguration_Discriminator" name="TenantConfiguration.Discriminator" value="">
-                        <input type="hidden" id="TenantConfiguration_CustomStyleSheetUrl" name="TenantConfiguration.CustomStyleSheetUrl" value="https://trov-develop-renters-gb.s3.us-west-1.amazonaws.com/templates/identityserver/halifax.app.css">
-                        <input type="hidden" id="TenantConfiguration_CustomJavascriptFileUrl" name="TenantConfiguration.CustomJavascriptFileUrl" value="https://trov-develop-renters-gb.s3.us-west-1.amazonaws.com/templates/identityserver/halifax.app.js">
-                        <input id="txtUsername" class="inputbox valid" placeholder="Enter your email address" autofocus="" type="text" data-val="true" data-val-required="The Email field is required." name="Email" value="ппп" aria-required="true" aria-invalid="false" aria-describedby="txtUsername-error">
-                        <div class="error-div">
-                            <div class="error-icon"></div>
-                            <span class="validation-error">
-                                Please enter a valid email address
-                            </span>
-                        </div>
+                        <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=halifax-web-client&amp;redirect_uri=https%3A%2F%2Ftrovrent-global-dev-halifax--web-renters.macronlabs.com%2FloginSuccessful&amp;response_type=id_token%20token&amp;scope=openid%20profile%20email%20trov.renters.api.client&amp;state=8f7f4413a5304632a0c620ecf9caf6d7&amp;nonce=fab54ecc196343b1b1bd1727b32644a2&amp;segmentID=AFVuhTXbomznsUWC95oErVepCCygFAzn">
+                        <input type="hidden" tabindex="-1" id="TenantConfiguration_Discriminator" name="TenantConfiguration.Discriminator" value="">
+                        <input type="hidden" tabindex="-1" id="TenantConfiguration_CustomStyleSheetUrl" name="TenantConfiguration.CustomStyleSheetUrl" value="https://trovrent-global-dev-halifax--web-renters.macronlabs.com/custom-branding/halifax/app.css">
+                        <input type="hidden" tabindex="-1" id="TenantConfiguration_CustomJavascriptFileUrl" name="TenantConfiguration.CustomJavascriptFileUrl" value="https://trovrent-global-dev-halifax--web-renters.macronlabs.com/custom-branding/halifax/app.js">
+                        <input class="inputbox" placeholder="Enter your email address" autofocus="" tabindex="0" type="text" data-val="true" data-val-maxlength="Email is limited by 254 characters" data-val-maxlength-max="254" data-val-required="The Email field is required." id="Email" maxlength="254" name="Email" value="">
+                        <span class="text-danger field-validation-valid" tabindex="-1" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                     </div>
 
                     <div class="row">
-                        <a id="btnSendEmail" class="forgot-passwrod-button">
-                            <label id="lblSendEmailText" class="forgot-passwrod-button-text">Submit</label>
-                            <div id="spinnerIcon" class="spinner-icon"></div>
-                        </a>
+                        <button type="submit" id="btnSendEmail" class="forgot-passwrod-button btn-primary btn-default" title="Submit">
+                            Submit
+                        </button>
                     </div>
-                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FPxrFj6KfdLjHvGN2JSMrXtD5k2xKnGc2BzDJU4ZYEKXoi_TUkMMcq6ijQCgTVcpLlfJ5HV8nfLvHVkT_F-5asaCSSvnQAsQjqKGPBdpGxj0ImvyNvxy6WnnsuXkSWtQaVSrw5RGhHMlMYY1iVl2qbc3hBI4g9AQig7jYewFGr0eHa78EZaXLAAdKsPgGKUgQ"></form>
+                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DFpIM--rSlNgLYM44QT2Ju3GXNB3Xhpc4jB2frKWUhAYLgEukCHgEaPjXGVvygkeZRsQpnAot9trV6Lu1X5x-zJ1OHrW9pCLXUkaqsxVYitxIc429nJLNy2VlilBNwimeD4-nkjp4bwv7g57jy3VPM"></form>
             </div>
         </div>
-
-        <div id="popUpMessage" class="message-control">
-            <div class="message-window">
-                <div class="type-bar error"></div>
-                <div class="message-container">
-                    <span class="message-title">Whoops!</span>
-                    <div id="txtMessage" class="message">Email is in icorrect format</div>
-                </div>
-            </div>
-            <div id="btnCloseMessage">
-                <div class="close-button">
-                    <div class="close-button-icon"></div>
-                </div>
-            </div>
-        </div>
-
 
     </div>
 
-
-
 </div>
 
-<!--<script src="https://idm-trovrent-us-dev.macronlabs.com/lib/jquery/jquery.js"></script>-->
-<!--<script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>-->
-<!--<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>-->
-<!--<script src="/lib/bootstrap/js/bootstrap.js"></script>-->
-<!--<script src="/dist/js/bundle.js"></script>-->
+<script src="https://idm-trovrent-us-dev.macronlabs.com/dist/js/bundle.js"></script>
 
+<script src="scripts/lloyds.app.js"></script>
 <div class="copyright-text">
     <p>
-        © 2018 Trov, Inc. All Rights Reserved.
+        © 2020 Trov, Inc. All Rights Reserved.
     </p>
     <p style="color: transparent">
-        2.1.0.0        </p>
+        2.5.4.0        </p>
 </div>
-<div class="footer-bar"></div>
+<div class="footer-bar"><div class="footer-container">
+    <ul>
+        <li>
+            <a href="https://www.halifax.co.uk/insurance/home-insurance/app/short-privacy-policy/" target="_blank">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="https://www.halifax.co.uk/insurance/home-insurance/app/terms-conditions/" target="_blank">Terms and Conditions</a>
+        </li>
+        <li>
+            <a href="https://www.halifax.co.uk/accessibility/" target="_blank">Accessibility</a>
+        </li>
+        <li>
+            <a href="https://www.halifax.co.uk/securityandprivacy/cookies/" target="_blank">Cookie Policy</a>
+        </li>
+    </ul>        <div class="footer-logo">            <p>Powered by</p>            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" viewBox="0 0 80 33">
+    <g fill="#FFF" fill-rule="evenodd">
+        <path d="M54.64 7.69c-.173-.42.063-.875.524-.875h4.385c.462 0 .97.459 1.129.886l6.105 16.427c.079.21.38.238.46.028l6.148-16.47c.16-.426.669-.87 1.13-.87h4.246c.461 0 .698.454.524.875l-9.446 23.29c-.172.422-.692 1.058-1.153 1.058h-3.406c-.461 0-.981-.636-1.155-1.057L54.641 7.69zM43.943 26.42c-4.093 0-7.41-3.265-7.41-7.293 0-4.028 3.317-7.293 7.41-7.293 4.092 0 7.41 3.265 7.41 7.293 0 4.028-3.318 7.293-7.41 7.293m-.021-19.488c-6.843 0-12.39 5.46-12.39 12.195s5.547 12.194 12.39 12.194c6.843 0 12.39-5.46 12.39-12.194 0-6.735-5.547-12.195-12.39-12.195M53.227 2.397a.543.543 0 0 1-.546.538H35.046a.542.542 0 0 1-.547-.538V.562c0-.297.245-.538.547-.538H52.68c.302 0 .546.241.546.538v1.835zM31.542 7.115c0-.329-.45-.59-.785-.584-3.738.07-6.05 1.568-7.735 4.344-.128.21-.351.124-.351-.12V7.619c0-.323-.65-.804-.977-.804H5.914V.902c0-.323-.05-.878-.377-.878h-4.45C.757.024 0 .58 0 .902v23.619c0 5.325 3.49 7.518 7.641 7.518h2.94c.328 0 .262-.734.262-1.057v-3.796c0-.323.066-.968-.262-.968H9.227c-1.913 0-3.313-.412-3.313-2.57V12.292c0-.323.482-.626.81-.626h9.332c.328 0 .7.303.7.626v18.69c0 .323.16 1.057.487 1.057h4.45c.329 0 .978-.734.978-1.057v-8.986c0-6.183 3.647-9.45 8.326-9.69a.573.573 0 0 0 .545-.582v-4.61z"></path>
+    </g>
+</svg>
+</div>
+</div></div>
 
 
-</body>
-</html>
+</body></html>
